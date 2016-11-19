@@ -12,6 +12,7 @@
 }
 
 .split-item {
+  height: 100vh;
   -webkit-box-pack: center;
    -webkit-justify-content: center;
    -ms-flex-pack: center;
@@ -32,7 +33,7 @@
    align-items: center;
 
    width: 50%;
-   padding: 3em 5em 6em 5em;
+   padding: 1em;
 }
 
 /* left */
