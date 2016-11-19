@@ -9,7 +9,7 @@
   font-weight: 300;
   font-size: 0.9em;
   letter-spacing: 2.75px;
-  margin: 1.8em 0;
+  margin: 1.8em auto;
   padding: 0.9em 1.8em;
   position: relative;
   text-decoration: none;
@@ -49,7 +49,7 @@
 .social-icon {
   width: 25px;
   height: 25px;
-  padding-left: 4px;
+  padding: 4px;
   display: inline-block;
   opacity: 1;
   transition: opacity .5s ease-in-out;
