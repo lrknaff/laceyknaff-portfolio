@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-export default class SplitLeftMain extends Component {
+export default class SplitRightAbout extends Component {
   render() {
     return (
-      <section className="split-item split-left-container">
+      <section className="split-item split-right-container">
         <h1 className="split-left-text fade-in-up">Hi, I'm Lacey.</h1>
         <h3 className="split-left-text fade-in-up">Graphic Designer and Front-End Developer.</h3>
         <button className="button fade-in-up">say hello</button>
