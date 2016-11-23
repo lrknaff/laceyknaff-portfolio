@@ -15,14 +15,6 @@
     "type": "git",
     "url": "https://github.com/lrknaff/laceyknaff-portfolio"
   },
-  "keywords": [
-  "reactScrollEffects",
-  "react",
-  "reactJS",
-  "react-component",
-  "animate",
-  "scroll"
-],
   "author": "Lacey Knaff",
   "license": "MIT",
   "bugs": {
@@ -62,16 +54,12 @@
     "react-addons-css-transition-group": "^15.0.2",
     "react-addons-test-utils": "^15.3.1",
     "react-router": "^2.4.0",
-    "react-scroll-effects": "^1.0.9",
     "sass-loader": "^4.0.2",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.2"
   },
-  "peerDependencies": {
-   "react": "^0.13.2"
- },
   "dependencies": {
     "animate.css": "^3.5.2",
     "firebase": "^3.4.0",
@@ -80,7 +68,6 @@
     "moment": "^2.15.1",
     "react": "^15.4.0",
     "react-dom": "^15.3.1",
-    "react-scroll-effects": "^1.0.9",
     "svg-react-loader": "^0.3.7"
   }
 }
