@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { TweenMax, staggerFrom, Power2 } from 'gsap'
+import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class SplitLeftMain extends Component {
   componentDidMount() {
-    // const node = this.node
+    this.gsapAnimation()
+  }
+  gsapAnimation() {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
     const e4 = this.four
+
+    TweenMax.staggerFrom([e1, e2, e3, e4], 1, { opacity: 0, scale: 0.5, y: 50, delay: 0.5, ease: Power2.easeOut }, 0.2)
+
+    // const node = this.node
     // TweenMax.to(node, 1, { opacity: 0, y: -5 })
-    TweenMax.staggerFrom([e1, e2, e3, e4], 1, { opacity: 0, scale: 0.5, y: 50, delay: 0.5, ease: Power2.easeIn }, 0.2)
   }
   render() {
     return (
