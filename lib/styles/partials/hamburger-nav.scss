@@ -3,8 +3,8 @@
   width: 30px;
   height: 25px;
   position: fixed;
-  margin-top: 40px;
-  right: 40px;
+  top: 30px;
+  right: 30px;
   background: white;
   border-style: none;
   outline: none;
@@ -17,6 +17,7 @@
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  z-index: 9999;
 }
 
 .hamburger-nav span {

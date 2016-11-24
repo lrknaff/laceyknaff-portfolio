@@ -61,4 +61,15 @@ body {
 /* about */
 .split-right-container {
   background: #FFF;
+  overflow: auto;
+}
+
+.split-right-faded-border {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 100%);
+  color: white;
+  height: 90px;
+  position: fixed;
+  width: 50%;
+  top: 0;
+  z-index: 1;
 }
