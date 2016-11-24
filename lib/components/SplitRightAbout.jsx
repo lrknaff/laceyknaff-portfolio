@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 import HamburgerNav from './HamburgerNav'
+import DropDownNav from './DropDownNav'
 
 export default class SplitRightAbout extends Component {
   componentDidMount() {
@@ -33,15 +34,16 @@ export default class SplitRightAbout extends Component {
       0.12)
   }
   handleScroll() {
-    console.log(window.pageYOffset)
-    if (window.pageYOffset > 20) {
-      console.log('Hello')
-    }
+    // console.log(window.pageYOffset)
+    // if (window.pageYOffset > 20) {
+    //   console.log('Hello')
+    // }
   }
   render() {
     return (
       <section className="split-item split-right-container">
         <HamburgerNav />
+        <DropDownNav />
         <section
           className="split-right-about-me section-spacing"
         >
@@ -114,6 +116,8 @@ export default class SplitRightAbout extends Component {
             <p>B. Architecture</p>
           </div>
         </section>
+
+        <button className="button light-background-button">view resumé</button>
       </section>
     )
   }
