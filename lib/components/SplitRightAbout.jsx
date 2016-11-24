@@ -109,7 +109,7 @@ export default class SplitRightAbout extends Component {
           </div>
           <div ref={(c) => { this.ten = c }}>
             <h5>University of Colorado, Boulder</h5>
-            <p>B. Architecture</p>
+            <p>B. Environmental Design</p>
           </div>
         </section>
 

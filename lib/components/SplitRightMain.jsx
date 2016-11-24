@@ -9,8 +9,8 @@ export default class SplitRightMain extends Component {
       <section
         className="split-item split-right-container"
       >
-        <DropDownNav />
         <HamburgerNav />
+        <DropDownNav />
         <SplitRightAbout />
       </section>
     )
