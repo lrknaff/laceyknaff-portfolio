@@ -13,15 +13,15 @@ export default class HamburgerNav extends Component {
   }
   render() {
     return (
-      <div
-        className={this.state.open ? 'hamburger-nav open' : 'hamburger-nav closed' }
+      <button
+        className={this.state.open ? 'hamburger-nav open' : 'hamburger-nav closed'}
         onClick={() => { this.setState({ open: !this.state.open }) }}
       >
         <span />
         <span />
         <span />
         <span />
-      </div>
+      </button>
     )
   }
 }
