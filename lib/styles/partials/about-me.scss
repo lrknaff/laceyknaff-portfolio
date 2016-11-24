@@ -1,18 +1,19 @@
 /* About me page styles */
 .section-spacing {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  width: 90%;
 }
 
-#about-me {
-  margin-top: 140px;
-  width: 95%;
+.split-right-about-me {
+  margin-top: 260px;
+  width: 90%;
 }
 
-#about-me p {
+.split-right-about-me p {
   margin: 0 0 5px;
 }
 
-#about-me p span {
+.split-right-about-me p span {
   display: block;
   margin-bottom: 9px;
 }
@@ -27,17 +28,17 @@ ul.skills {
   margin-top: 5px;
   margin-left: 20px;
   line-height: 1.2em;
-}
 
-.skills li {
-  font-weight: 300;
-  font-size: 13px;
-  color: #32DBB7;
-  padding: 5px 0;
-}
+  li {
+    font-weight: 300;
+    font-size: 13px;
+    color: #32DBB7;
+    padding: 5px 0;
+  }
 
-.skills li span {
-  color: #969696;
+  span {
+    color: #969696;
+  }
 }
 
 /* Experience */
@@ -45,7 +46,6 @@ ul.skills {
 .work-experience {
   height: 50px;
   margin-bottom: 12px;
-  margin-right: 20px;
 }
 
 .work-description {
