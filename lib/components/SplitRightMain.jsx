@@ -10,9 +10,6 @@ export default class SplitRightMain extends Component {
       navOpen: false,
     }
   }
-  toggleNavOpen() {
-    this.setState({ navOpen: !this.state.navOpen })
-  }
   render() {
     return (
       <section
@@ -22,10 +19,9 @@ export default class SplitRightMain extends Component {
           toggleNavOpen={() => { this.setState({ navOpen: !this.state.navOpen }) }}
           navOpen={this.state.navOpen}
         />
-        {this.state.open ?
+        {this.state.navOpen ?
           <DropDownNav /> :
-        null}
-        <SplitRightAbout />
+          null}
       </section>
     )
   }

@@ -6,7 +6,7 @@ export default class DropDownNav extends Component {
     this.gsapAnimationIn()
     // this.drawLine()
   }
-  componentDidUnmount() {
+  componentWillUnmount() {
     this.gsapAnimationOut()
   }
   gsapAnimationIn() {

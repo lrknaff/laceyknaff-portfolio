@@ -2,18 +2,6 @@ import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class HamburgerNav extends Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     navOpen: false,
-  //   }
-  // }
-  // toggleClass() {
-  //   this.setState({ open: !this.state.open })
-  // }
-  handleClick() {
-    this.props.toggleNavOpen()
-  }
   render() {
     return (
       <button
