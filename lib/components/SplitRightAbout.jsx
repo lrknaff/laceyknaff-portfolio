@@ -7,6 +7,9 @@ export default class SplitRightAbout extends Component {
     // this.gsapAnimation()
     window.addEventListener('scroll', this.handleScroll)
   }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
   gsapAnimation() {
     const e1 = this.one
     const e2 = this.two
@@ -17,13 +20,16 @@ export default class SplitRightAbout extends Component {
   }
   handleScroll() {
     console.log(window.pageYOffset)
+    if (window.pageYOffset > 20) {
+      console.log('Hello')
+    }
   }
   render() {
     return (
       <section className="split-item split-right-container">
         <HamburgerNav />
 
-      <section id="about-me" className="section-spacing">
+      {/* <section id="about-me" className="section-spacing">
         <h4>About</h4>
         <p>Lacey is a designer and front-end developer based in Denver, Colorado. She's in love with everything design and development, and has a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far to many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic. Her other passions include working on her vintage motorcycle, drinking beer on patios, riding her bike down mountains, shredding the gnar, and being a kind human being. She also thinks her dog might be cooler than she is.<span><br />These are some skills and programs she uses along the way:</span></p>
         <ul className="skills">
@@ -33,7 +39,7 @@ export default class SplitRightAbout extends Component {
           <li><span>JavaScript/JQuery</span></li>
           <li><span>GitHub</span></li>
         </ul>
-      </section>
+      </section> */}
       </section>
     )
   }
