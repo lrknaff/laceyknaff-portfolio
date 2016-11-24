@@ -4,13 +4,27 @@ import DropDownNav from './DropDownNav'
 import SplitRightAbout from './SplitRightAbout'
 
 export default class SplitRightMain extends Component {
+  constructor() {
+    super()
+    this.state = {
+      navOpen: false,
+    }
+  }
+  toggleNavOpen() {
+    this.setState({ navOpen: !this.state.navOpen })
+  }
   render() {
     return (
       <section
         className="split-item split-right-container"
       >
-        <HamburgerNav />
-        <DropDownNav />
+        <HamburgerNav
+          toggleNavOpen={() => { this.setState({ navOpen: !this.state.navOpen }) }}
+          navOpen={this.state.navOpen}
+        />
+        {this.state.open ?
+          <DropDownNav /> :
+        null}
         <SplitRightAbout />
       </section>
     )
