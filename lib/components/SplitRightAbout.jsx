@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
-import HamburgerNav from './HamburgerNav'
-import DropDownNav from './DropDownNav'
 
 export default class SplitRightAbout extends Component {
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    // window.addEventListener('scroll', this.handleScroll)
     this.gsapAnimation()
   }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
   gsapAnimation() {
     const e1 = this.one
     const e2 = this.two
@@ -21,7 +19,7 @@ export default class SplitRightAbout extends Component {
     const e7 = this.seven
     const e8 = this.eight
     const e9 = this.nine
-    const e10 = this.TweenMax
+    const e10 = this.ten
 
     TweenMax.staggerFrom(
       [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10],
@@ -33,17 +31,15 @@ export default class SplitRightAbout extends Component {
         ease: Power2.easeOut },
       0.12)
   }
-  handleScroll() {
-    // console.log(window.pageYOffset)
-    // if (window.pageYOffset > 20) {
-    //   console.log('Hello')
-    // }
-  }
+  // handleScroll() {
+  //   console.log(window.pageYOffset)
+  //   if (window.pageYOffset > 20) {
+  //     console.log('Hello')
+  //   }
+  // }
   render() {
     return (
-      <section className="split-item split-right-container">
-        <HamburgerNav />
-        <DropDownNav />
+      <section className="split-right">
         <section
           className="split-right-about-me section-spacing"
         >
