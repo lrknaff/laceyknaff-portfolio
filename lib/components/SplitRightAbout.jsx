@@ -32,7 +32,7 @@ export default class SplitRightAbout extends Component {
           className="split-right-about-me section-spacing"
         >
           <h4 ref={(c) => { this.one = c }}>About</h4>
-          <p ref={(c) => { this.two = c }}>Lacey is a designer and front-end developer with a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far too many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic.<span><br />These are some skills and programs she uses along the way:</span></p>
+          <p ref={(c) => { this.two = c }}>Lacey is a designer and front-end developer with a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far too many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic. She is available for full-time and freelance hire, and would love to <a href="#">work with you.</a><span><br />These are some skills and programs she uses along the way:</span></p>
           <ul className="skills" ref={(c) => { this.three = c }}>
             <li><span>Adobe Creative Suite</span></li>
             <li><span>Sketch</span></li>
@@ -74,6 +74,18 @@ export default class SplitRightAbout extends Component {
             <div className="work-year">
               <h5>2014-2015</h5>
             </div>
+          </div>
+        </section>
+
+        <section className="split-right-education section-spacing">
+          <h4>Education</h4>
+          <div>
+            <h5>Turing School of Software and Design</h5>
+            <p>Front-End Engineering</p>
+          </div>
+          <div>
+            <h5>University of Colorado, Boulder</h5>
+            <p>B. Architecture</p>
           </div>
         </section>
       </section>
