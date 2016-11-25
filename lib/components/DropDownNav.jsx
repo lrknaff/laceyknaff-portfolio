@@ -51,22 +51,29 @@ export default class DropDownNav extends Component {
           <li
             className="about-link menu-item"
             ref={(c) => { this.one = c }}
-          ><a href="#About">About</a>
+          >
+            <a
+              href="#About"
+              onClick={this.props.toggleNavOpen}
+            >About</a>
           </li>
           <li
             className="menu-item"
             ref={(c) => { this.two = c }}
-          ><a href="#Projects">Projects</a>
+          >
+            <a href="#Projects">Projects</a>
           </li>
           <li
             className="menu-item"
             ref={(c) => { this.three = c }}
-          ><a href="#Projects">Contact</a>
+          >
+            <a href="#Projects">Contact</a>
           </li>
           <li
             className="menu-item"
             ref={(c) => { this.four = c }}
-          ><a href="#Projects">Blog</a>
+          >
+            <a href="#Projects">Blog</a>
           </li>
         </ul>
       </nav>

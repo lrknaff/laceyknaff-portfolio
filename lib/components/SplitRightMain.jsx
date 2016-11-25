@@ -27,7 +27,9 @@ export default class SplitRightMain extends Component {
           <SplitRightAbout /> :
           null}
         {this.state.navOpen ?
-          <DropDownNav /> :
+          <DropDownNav
+            toggleNavOpen={this.toggleNav.bind(this)}
+          /> :
           null}
       </section>
     )
