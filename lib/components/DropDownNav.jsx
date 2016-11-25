@@ -2,17 +2,78 @@ import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class DropDownNav extends Component {
+  componentDidMount() {
+    this.gsapAnimationIn()
+    // this.drawLine()
+  }
+  componentWillLeave(callback) {
+    this.gsapAnimationOut(callback())
+  }
+  gsapAnimationIn() {
+    const e1 = this.one
+    const e2 = this.two
+    const e3 = this.three
+    const e4 = this.four
+
+    TweenMax.staggerFrom(
+      [e1, e2, e3, e4],
+      1,
+      {
+        opacity: 0,
+        y: 50,
+        delay: 0.2,
+        ease: Power2.easeOut },
+      0.12)
+  }
+  gsapAnimationOut() {
+    const e1 = this.one
+    const e2 = this.two
+    const e3 = this.three
+    const e4 = this.four
+
+    TweenMax.staggerTo(
+      [e1, e2, e3, e4],
+      1,
+      {
+        opacity: 0,
+        y: 50,
+        delay: 0.2,
+        ease: Power2.easeIn },
+      0.12)
+  }
+  // drawLine() {
+  //   TweenMax.staggerFrom('.draw-me', 2, { drawSVG: 0 }, 0.1)
+  // }
   render() {
     return (
-      <nav id="nav-inner">
-        <ul id="full-screen-nav">
-          <li id="about-link" className="menu-item fade-in-up"><a href="#About">About</a>
+      <nav className="split-right">
+        <ul className="full-screen-nav">
+          <li
+            className="about-link menu-item"
+            ref={(c) => { this.one = c }}
+          >
+            <a
+              href="#About"
+              onClick={this.props.toggleNavOpen}
+            >About</a>
           </li>
-          <li className="menu-item fade-in-up fade-in-up-second"><a href="#Projects">Projects</a>
+          <li
+            className="menu-item"
+            ref={(c) => { this.two = c }}
+          >
+            <a href="#Projects">Projects</a>
           </li>
-          <li className="menu-item fade-in-up fade-in-up-third"><a href="#Projects">Contact</a>
+          <li
+            className="menu-item"
+            ref={(c) => { this.three = c }}
+          >
+            <a href="#Projects">Contact</a>
           </li>
-          <li className="menu-item fade-in-up fade-in-up-fourth"><a href="#Projects">Blog</a>
+          <li
+            className="menu-item"
+            ref={(c) => { this.four = c }}
+          >
+            <a href="#Projects">Blog</a>
           </li>
         </ul>
       </nav>

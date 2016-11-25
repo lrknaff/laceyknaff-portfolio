@@ -6,6 +6,7 @@
 * JavaScript
 * React
 * React Router
+* Greensock
 * Webpack
 * Git/GitHub
 * Atom Text Editor

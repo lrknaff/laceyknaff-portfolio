@@ -45,6 +45,16 @@
   }
 }
 
+/* light background */
+.light-background {
+  &:hover {
+    color: $pop-color;
+  }
+  &::before {
+    border: 2px solid $pop-color;
+  }
+}
+
 /* social */
 .social-icon {
   display: inline-block;
