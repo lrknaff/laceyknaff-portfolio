@@ -2,14 +2,22 @@ import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class SplitRightAbout extends Component {
+  constructor() {
+    super()
+    this.state = {
+      mounted: 0,
+    }
+  }
   componentDidMount() {
     // window.addEventListener('scroll', this.handleScroll)
-    this.gsapAnimation()
+    if (this.state.mounted === 0) {
+      this.gsapAnimationSlow()
+    }
   }
   // componentWillUnmount() {
   //   window.removeEventListener('scroll', this.handleScroll)
   // }
-  gsapAnimation() {
+  gsapAnimationSlow() {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
@@ -27,7 +35,7 @@ export default class SplitRightAbout extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 0.2,
+        delay: 1.2,
         ease: Power2.easeOut },
       0.12)
   }

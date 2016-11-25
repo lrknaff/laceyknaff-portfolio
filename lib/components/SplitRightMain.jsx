@@ -9,10 +9,11 @@ export default class SplitRightMain extends Component {
     this.state = {
       navOpen: false,
       aboutExpanded: true,
+      mounted: 0,
     }
   }
   toggleNav() {
-    this.setState({ navOpen: !this.state.navOpen, aboutExpanded: !this.state.aboutExpanded })
+    this.setState({ navOpen: !this.state.navOpen, aboutExpanded: !this.state.aboutExpanded, mounted: 1 })
   }
   render() {
     return (
