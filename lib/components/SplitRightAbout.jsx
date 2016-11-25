@@ -27,7 +27,7 @@ export default class SplitRightAbout extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 1.5,
+        delay: 0.12,
         ease: Power2.easeOut },
       0.12)
   }

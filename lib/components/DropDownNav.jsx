@@ -6,8 +6,8 @@ export default class DropDownNav extends Component {
     this.gsapAnimationIn()
     // this.drawLine()
   }
-  componentWillUnmount() {
-    this.gsapAnimationOut()
+  componentWillLeave(callback) {
+    this.gsapAnimationOut(callback())
   }
   gsapAnimationIn() {
     const e1 = this.one
@@ -38,7 +38,7 @@ export default class DropDownNav extends Component {
         opacity: 0,
         y: 50,
         delay: 0.2,
-        ease: Power2.easeOut },
+        ease: Power2.easeIn },
       0.12)
   }
   // drawLine() {

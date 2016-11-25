@@ -8,7 +8,11 @@ export default class SplitRightMain extends Component {
     super()
     this.state = {
       navOpen: false,
+      aboutExpanded: true,
     }
+  }
+  toggleNav() {
+    this.setState({ navOpen: !this.state.navOpen, aboutExpanded: !this.state.aboutExpanded })
   }
   render() {
     return (
@@ -16,9 +20,12 @@ export default class SplitRightMain extends Component {
         className="split-item split-right-container"
       >
         <HamburgerNav
-          toggleNavOpen={() => { this.setState({ navOpen: !this.state.navOpen }) }}
+          toggleNavOpen={this.toggleNav.bind(this)}
           navOpen={this.state.navOpen}
         />
+        {this.state.aboutExpanded ?
+          <SplitRightAbout /> :
+          null}
         {this.state.navOpen ?
           <DropDownNav /> :
           null}
