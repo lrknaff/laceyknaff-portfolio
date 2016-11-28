@@ -3,10 +3,10 @@ body {
 }
 
 /* main */
-.main-container {
-  height: 100vh;
-  overflow: hidden;
-}
+// .main-container {
+//   height: 100vh;
+//   overflow: hidden;
+// }
 
 .split-container {
   -webkit-box-orient: horizontal;
@@ -19,6 +19,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .split-item {

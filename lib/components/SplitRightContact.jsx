@@ -36,9 +36,41 @@ export default class SplitRightAbout extends Component {
   render() {
     return (
       <section className="split-right">
+        <h4>Get in touch</h4>
+        <p>Interested in working together? Just want to be friends? Fill out the form below and I'll get back to you as soon as possible!</p>
         <form>
-          <input />
+          <label
+            className="contact-label-name"
+            htmlFor="name"
+          >
+            Name:
+            <input
+              className="contact-input-name"
+              type="text"
+            />
+          </label>
+          <label
+            className="contact-label-email"
+            htmlFor="email address"
+          >
+            Email Address:
+            <input
+              className="contact-input-email"
+              type="text"
+            />
+          </label>
+          <label
+            className="contact-label-message"
+            htmlFor="message"
+          >
+            Message:
+            <input
+              className="contact-input-message"
+              type="text"
+            />
+          </label>
         </form>
+        <button className="button light-background-button">Submit</button>
       </section>
     )
   }
