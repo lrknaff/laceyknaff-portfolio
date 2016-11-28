@@ -54,7 +54,7 @@ export default class DropDownNav extends Component {
           >
             <a
               href="#About"
-              onClick={this.props.toggleNavOpen}
+              onClick={this.props.expandAboutPage}
             >About</a>
           </li>
           <li
@@ -67,7 +67,10 @@ export default class DropDownNav extends Component {
             className="menu-item"
             ref={(c) => { this.three = c }}
           >
-            <a href="#Projects">Contact</a>
+            <a
+              href="#Projects"
+              onClick={this.props.expandContactForm}
+            >Contact</a>
           </li>
           <li
             className="menu-item"
