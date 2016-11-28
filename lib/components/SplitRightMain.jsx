@@ -11,14 +11,16 @@ export default class SplitRightMain extends Component {
       navOpen: false,
       aboutExpanded: true,
       contactExpanded: false,
+      projectsExpanded: false,
       rememberOpen: 'About',
       mounted: 0,
     }
   }
   toggleNav() {
-    this.lastOpen()
     this.setState({
       navOpen: !this.state.navOpen,
+      aboutExpanded: false,
+      contactExpanded: false,
       mounted: 1,
     })
   }
@@ -38,24 +40,8 @@ export default class SplitRightMain extends Component {
       rememberOpen: 'Contact',
     })
   }
-  lastOpen() {
-    if (this.state.rememberOpen === 'About') {
-      this.setState({
-        navOpen: !this.state.navOpen,
-        aboutExpanded: !this.state.aboutExpanded,
-        contactExpanded: false,
-      })
-    } else if (this.state.rememberOpen === 'Contact') {
-      this.setState({
-        navOpen: !this.state.navOpen,
-        aboutExpanded: false,
-        contactExpanded: !this.state.contactExpanded,
-      })
-    } this.setState({
-      navOpen: false,
-      aboutExpanded: true,
-      contactExpanded: false,
-    })
+  expandProjectsPage() {
+
   }
   render() {
     return (
@@ -68,7 +54,9 @@ export default class SplitRightMain extends Component {
         />
 
         {this.state.aboutExpanded ?
-          <SplitRightAbout /> :
+          <SplitRightAbout
+            expandContactForm={this.expandContactForm.bind(this)}
+          /> :
           null}
 
         {this.state.navOpen ?
