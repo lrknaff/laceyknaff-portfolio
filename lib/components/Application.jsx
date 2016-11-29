@@ -6,6 +6,8 @@ import { TweenMax, staggerFrom, Back } from 'gsap'
 import Loader from './Loader'
 import SplitLeftMain from './SplitLeftMain'
 import SplitRightMain from './SplitRightMain'
+import SplitRightAbout from './SplitRightAbout'
+import HamburgerNav from './HamburgerNav'
 
 export default class Application extends Component {
   // constructor() {
@@ -24,7 +26,13 @@ export default class Application extends Component {
     return (
       <article className="split-container">
         <SplitLeftMain />
-        <SplitRightMain />
+        <section
+          className="split-item split-right-container"
+        >
+          <HamburgerNav />
+          <SplitRightAbout />
+        </section>
+        {/* <SplitRightMain /> */}
       </article>
       // <div className="main-container">
       //   {this.state.loaded ?

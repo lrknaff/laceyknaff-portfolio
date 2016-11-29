@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Router, Route, Link, browserHistory } from 'react-router'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class DropDownNav extends Component {
@@ -48,30 +49,39 @@ export default class DropDownNav extends Component {
     return (
       <nav className="split-right">
         <ul className="full-screen-nav">
+
           <li
             className="about-link menu-item"
             ref={(c) => { this.one = c }}
           >
-            <a
-              href="#About"
-              onClick={this.props.expandAboutPage}
-            >About</a>
+            <Link
+              to="/about"
+              // onClick={this.props.expandAboutPage}
+              activeStyle={{ color: 'orange' }}
+            >About</Link>
           </li>
+
           <li
             className="menu-item"
             ref={(c) => { this.two = c }}
           >
-            <a href="#Projects">Projects</a>
+            <Link
+              to="/projects"
+              activeStyle={{ color: 'orange' }}
+            >Projects</Link>
           </li>
+
           <li
             className="menu-item"
             ref={(c) => { this.three = c }}
           >
-            <a
-              href="#Contact"
-              onClick={this.props.expandContactForm}
-            >Contact</a>
+            <Link
+              to="/contact"
+              // onClick={this.props.expandContactForm}
+              activeStyle={{ color: 'orange' }}
+            >Contact</Link>
           </li>
+
           <li
             className="menu-item"
             ref={(c) => { this.four = c }}
