@@ -2,14 +2,22 @@ import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class SplitRightAbout extends Component {
+  constructor() {
+    super()
+    this.state = {
+      mounted: 0,
+    }
+  }
   componentDidMount() {
     // window.addEventListener('scroll', this.handleScroll)
-    this.gsapAnimation()
+    if (this.state.mounted === 0) {
+      this.gsapAnimationSlow()
+    }
   }
   // componentWillUnmount() {
   //   window.removeEventListener('scroll', this.handleScroll)
   // }
-  gsapAnimation() {
+  gsapAnimationSlow() {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
@@ -27,7 +35,7 @@ export default class SplitRightAbout extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 0.2,
+        delay: 1.2,
         ease: Power2.easeOut },
       0.12)
   }
@@ -44,7 +52,7 @@ export default class SplitRightAbout extends Component {
           className="split-right-about-me section-spacing"
         >
           <h4 ref={(c) => { this.one = c }}>About</h4>
-          <p ref={(c) => { this.two = c }}>Lacey is a designer and front-end developer with a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far too many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic. She is available for full-time and freelance hire, and would love to <a href="#">work with you.</a><span><br />These are some skills and programs she uses along the way:</span></p>
+          <p ref={(c) => { this.two = c }}>Lacey is a designer and front-end developer with a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far too many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic. She is available for full-time and freelance hire, and would love to <a href="#Contact" onClick={this.props.expandContactForm}>work with you.</a><span><br />These are some skills and programs she uses along the way:</span></p>
           <ul
             className="skills"
             ref={(c) => { this.three = c }}
