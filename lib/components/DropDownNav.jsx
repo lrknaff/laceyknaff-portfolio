@@ -51,7 +51,7 @@ export default class DropDownNav extends Component {
           <li
             className="about-link menu-item"
             ref={(c) => { this.one = c }}
-          >
+          > 
             <a
               href="#About"
               onClick={this.props.expandAboutPage}
