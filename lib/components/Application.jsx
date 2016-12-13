@@ -26,13 +26,7 @@ export default class Application extends Component {
     return (
       <article className="split-container">
         <SplitLeftMain />
-        <section
-          className="split-item split-right-container"
-        >
-          <HamburgerNav />
-          <SplitRightAbout />
-        </section>
-        {/* <SplitRightMain /> */}
+        <SplitRightMain />
       </article>
       // <div className="main-container">
       //   {this.state.loaded ?

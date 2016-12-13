@@ -121,7 +121,7 @@ export default class SplitRightAbout extends Component {
           </div>
         </section>
 
-        <button className="button light-background-button">view resumé</button>
+        <button className="button light-background-button">view projects</button>
       </section>
     )
   }
