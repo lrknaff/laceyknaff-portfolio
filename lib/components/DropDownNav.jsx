@@ -4,10 +4,13 @@ import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 export default class DropDownNav extends Component {
   componentDidMount() {
     this.gsapAnimationIn()
-    // this.drawLine()
   }
   componentWillLeave(callback) {
-    this.gsapAnimationOut(callback())
+    this.gsapAnimationOut()
+
+    setTimeout(() => {
+      callback()
+    }, 400)
   }
   gsapAnimationIn() {
     const e1 = this.one
@@ -41,9 +44,6 @@ export default class DropDownNav extends Component {
         ease: Power2.easeIn },
       0.12)
   }
-  // drawLine() {
-  //   TweenMax.staggerFrom('.draw-me', 2, { drawSVG: 0 }, 0.1)
-  // }
   render() {
     return (
       <nav className="split-right">
