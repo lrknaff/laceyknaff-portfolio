@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Router, Route, Link, browserHistory } from 'react-router'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class DropDownNav extends Component {
@@ -6,7 +7,10 @@ export default class DropDownNav extends Component {
     this.gsapAnimationIn()
   }
   componentWillLeave(callback) {
-    this.gsapAnimationOut(callback())
+    this.gsapAnimationOut()
+    setTimeout(() => {
+      callback()
+    }, 400)
   }
   gsapAnimationIn() {
     const e1 = this.one
@@ -48,10 +52,10 @@ export default class DropDownNav extends Component {
             className="about-link menu-item"
             ref={(c) => { this.one = c }}
           >
-            <a
-              href="#About"
+            <Link
+              to="/About"
               onClick={this.props.expandAboutPage}
-            >About</a>
+            >About</Link>
           </li>
           <li
             className="menu-item"
@@ -63,10 +67,10 @@ export default class DropDownNav extends Component {
             className="menu-item"
             ref={(c) => { this.three = c }}
           >
-            <a
-              href="#Contact"
+            <Link
+              to="/Contact"
               onClick={this.props.expandContactForm}
-            >Contact</a>
+            >Contact</Link>
           </li>
           <li
             className="menu-item"

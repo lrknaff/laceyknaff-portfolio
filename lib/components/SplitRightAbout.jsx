@@ -14,9 +14,6 @@ export default class SplitRightAbout extends Component {
       this.gsapAnimationSlow()
     }
   }
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.handleScroll)
-  // }
   gsapAnimationSlow() {
     const e1 = this.one
     const e2 = this.two
