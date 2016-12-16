@@ -3,10 +3,6 @@ body {
 }
 
 /* main */
-// .main-container {
-//   height: 100vh;
-//   overflow: hidden;
-// }
 
 .split-container {
   -webkit-box-orient: horizontal;
@@ -20,6 +16,7 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .split-item {
@@ -56,6 +53,7 @@ body {
   -webkit-order: -1;
   -ms-flex-order: -1;
   text-align: center;
+  width: 50%;
 }
 
 .split-left-text-block {
@@ -69,4 +67,6 @@ body {
   background: #FFF;
   display: block;
   overflow: auto;
+  position: absolute;
+  right: 0;
 }

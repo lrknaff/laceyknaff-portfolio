@@ -9,9 +9,9 @@ import SplitRightAbout from './SplitRightAbout'
 export default class Application extends Component {
   render() {
     return (
-      <article className="split-container">
+      <section className="split-item split-right-container">
         <SplitRightAbout />
-      </article>
+      </section>
     )
   }
 }

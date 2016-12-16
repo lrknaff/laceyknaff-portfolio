@@ -61,7 +61,9 @@ export default class DropDownNav extends Component {
             className="menu-item"
             ref={(c) => { this.two = c }}
           >
-            <a href="#Projects">Projects</a>
+            <Link
+              to="/Projects"
+            >Projects</Link>
           </li>
           <li
             className="menu-item"
