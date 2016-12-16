@@ -46,7 +46,7 @@ export default class DropDownNav extends Component {
   }
   render() {
     return (
-      <nav className="split-right">
+      <nav className="split-right split-right-nav">
         <ul className="full-screen-nav">
           <li
             className="about-link menu-item"
