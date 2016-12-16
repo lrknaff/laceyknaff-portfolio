@@ -48,6 +48,7 @@ body {
   background-size: cover;
   color: #FFF;
   padding-bottom: 1em;
+  position: fixed;
   order: -1;
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
@@ -68,4 +69,6 @@ body {
   overflow: auto;
   position: absolute;
   right: 0;
+  width: 50%;
+  z-index: 999;
 }

@@ -106,10 +106,8 @@
   }
 }
 
-.split-right-nav-container {
-  z-index: 9999;
-}
-
 .split-right-nav {
   width: 50%;
+  position: absolute;
+  right: 0;
 }

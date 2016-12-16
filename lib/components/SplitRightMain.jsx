@@ -18,14 +18,10 @@ export default class SplitRightMain extends Component {
   }
   render() {
     return (
-      <section
-        className="split-item split-right-container split-right-nav-container"
-      >
-        <HamburgerNav
-          toggleNavOpen={this.toggleNav.bind(this)}
-          navOpen={this.state.navOpen}
-        />
-      </section>
+      <HamburgerNav
+        toggleNavOpen={this.toggleNav.bind(this)}
+        navOpen={this.state.navOpen}
+      />
     )
   }
 }
