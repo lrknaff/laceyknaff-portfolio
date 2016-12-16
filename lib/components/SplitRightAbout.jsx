@@ -14,9 +14,6 @@ export default class SplitRightAbout extends Component {
       this.gsapAnimationSlow()
     }
   }
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.handleScroll)
-  // }
   gsapAnimationSlow() {
     const e1 = this.one
     const e2 = this.two
@@ -47,7 +44,7 @@ export default class SplitRightAbout extends Component {
   // }
   render() {
     return (
-      <section className="split-right">
+      <section className="split-right split-right-container">
         <section
           className="split-right-about-me section-spacing"
         >
@@ -121,7 +118,7 @@ export default class SplitRightAbout extends Component {
           </div>
         </section>
 
-        <button className="button light-background-button">view resumé</button>
+        <button className="button light-background-button">view projects</button>
       </section>
     )
   }

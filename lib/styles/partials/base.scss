@@ -3,10 +3,6 @@ body {
 }
 
 /* main */
-// .main-container {
-//   height: 100vh;
-//   overflow: hidden;
-// }
 
 .split-container {
   -webkit-box-orient: horizontal;
@@ -20,6 +16,7 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .split-item {
@@ -51,11 +48,13 @@ body {
   background-size: cover;
   color: #FFF;
   padding-bottom: 1em;
+  position: fixed;
   order: -1;
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
   -ms-flex-order: -1;
   text-align: center;
+  width: 50%;
 }
 
 .split-left-text-block {
@@ -66,7 +65,10 @@ body {
 /* right */
 /* about */
 .split-right-container {
-  background: #FFF;
   display: block;
   overflow: auto;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 999;
 }
