@@ -86,3 +86,32 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* projects */
+.full-screen {
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+}
+
+.project-grid {
+  border: 1px solid black;
+  width: 33.1%;
+}
