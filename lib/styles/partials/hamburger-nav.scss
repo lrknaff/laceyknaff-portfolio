@@ -5,8 +5,8 @@
   height: 25px;
   outline: none;
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 35px;
+  top: 35px;
   width: 30px;
   transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
@@ -23,10 +23,10 @@
     background: #484848;
     border-radius: 4px;
     display: block;
-    height: 4px;
+    height: 3px;
     opacity: 1;
     position: absolute;
-    width: 100%;
+    width: 90%;
     left: 0;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -93,9 +93,9 @@
     font-weight: 700;
     font-style: italic;
     font-size: 2em;
-    letter-spacing: 0.75px;
-    line-height: 2.5em;
     text-decoration: none;
+    color: #484848;
+    line-height: 2.5em;
     transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
     -webkit-transition: color .25s ease-in-out;
@@ -107,7 +107,7 @@
 }
 
 .split-right-nav {
-  width: 50%;
   position: absolute;
+  width: 50%;
   right: 0;
 }

@@ -54,12 +54,10 @@ export default class SplitRightAbout extends Component {
             className="skills"
             ref={(c) => { this.three = c }}
           >
-            <li><span>Adobe Creative Suite</span></li>
-            <li><span>Sketch</span></li>
-            <li><span>HTML/CSS/Sass</span></li>
-            <li><span>JavaScript/JQuery</span></li>
-            <li><span>React</span></li>
-            <li><span>GitHub</span></li>
+            <li><span>Adobe Creative Suite, Sketch App</span></li>
+            <li><span>JavaScript, jQuery, HTML, CSS, Sass, Git</span></li>
+            <li><span>React, React Router, Redux, Ember</span></li>
+            <li><span>Mocha, Chai, Enzyme, Jest, Selenium</span></li>
           </ul>
         </section>
 
