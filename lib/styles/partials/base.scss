@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   box-sizing: border-box;
 }
@@ -66,9 +70,19 @@ body {
 /* about */
 .split-right-container {
   display: block;
+  height: 100%;
   overflow: auto;
   position: absolute;
   right: 0;
   width: 50%;
-  z-index: 999;
+  z-index: 99;
+}
+
+/* contact */
+.split-right-contact-me {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 }

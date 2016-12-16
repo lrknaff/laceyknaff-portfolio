@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { Router, Route, Link, browserHistory } from 'react-router'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class SplitLeftMain extends Component {
@@ -32,10 +33,14 @@ export default class SplitLeftMain extends Component {
           >Graphic Designer and Front-End Developer.
           </h3>
           <div ref={(c) => { this.three = c }}>
-            <button
-              className="button"
-            >say hello
-            </button>
+            <Link
+              to="/Contact"
+            >
+              <button
+                className="button"
+              >say hello
+              </button>
+            </Link>
           </div>
           <div
             className="split-left-social"
