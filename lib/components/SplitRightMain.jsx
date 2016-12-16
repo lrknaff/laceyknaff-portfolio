@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import HamburgerNav from './HamburgerNav'
 import DropDownNav from './DropDownNav'
-import SplitRightAbout from './SplitRightAbout'
-import SplitRightContact from './SplitRightContact'
 
 export default class SplitRightMain extends Component {
   constructor() {
@@ -18,10 +16,19 @@ export default class SplitRightMain extends Component {
   }
   render() {
     return (
-      <HamburgerNav
-        toggleNavOpen={this.toggleNav.bind(this)}
-        navOpen={this.state.navOpen}
-      />
+      <section className={this.state.navOpen ? 'split-right-nav-open' : 'split-right-closed'}>
+        <HamburgerNav
+          toggleNavOpen={this.toggleNav.bind(this)}
+          navOpen={this.state.navOpen}
+        />
+        {this.state.navOpen ?
+          <DropDownNav
+            className="fake-nav"
+            toggleNavClosed={this.toggleNav.bind(this)}
+          /> :
+          null
+        }
+      </section>
     )
   }
 }

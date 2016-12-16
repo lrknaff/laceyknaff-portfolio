@@ -7,10 +7,11 @@ export default class DropDownNav extends Component {
     this.gsapAnimationIn()
   }
   componentWillLeave(callback) {
-    this.gsapAnimationOut()
+    console.log('Im out')
     setTimeout(() => {
       callback()
     }, 400)
+    this.gsapAnimationOut()
   }
   gsapAnimationIn() {
     const e1 = this.one
@@ -34,7 +35,7 @@ export default class DropDownNav extends Component {
     const e3 = this.three
     const e4 = this.four
 
-    TweenMax.staggerFrom(
+    TweenMax.staggerTo(
       [e1, e2, e3, e4],
       1,
       {
@@ -54,7 +55,7 @@ export default class DropDownNav extends Component {
           >
             <Link
               to="/About"
-              onClick={this.props.expandAboutPage}
+              onClick={this.props.toggleNavClosed}
             >About</Link>
           </li>
           <li
@@ -63,6 +64,7 @@ export default class DropDownNav extends Component {
           >
             <Link
               to="/Projects"
+              onClick={this.props.toggleNavClosed}
             >Projects</Link>
           </li>
           <li
@@ -71,7 +73,7 @@ export default class DropDownNav extends Component {
           >
             <Link
               to="/Contact"
-              onClick={this.props.expandContactForm}
+              onClick={this.props.toggleNavClosed}
             >Contact</Link>
           </li>
           <li

@@ -106,8 +106,18 @@
   }
 }
 
-.split-right-nav {
+.split-right-nav-open {
+  background: white;
+  height: 100%;
   position: absolute;
   width: 50%;
   right: 0;
+  z-index: 999;
+}
+
+.split-right-nav-closed {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  z-index: 0;
 }

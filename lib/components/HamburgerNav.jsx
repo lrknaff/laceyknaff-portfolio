@@ -5,8 +5,7 @@ import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 export default class HamburgerNav extends Component {
   render() {
     return (
-      <Link
-        to={this.props.navOpen ? '/public' : '/Nav'}
+      <button
         className={this.props.navOpen ? 'hamburger-nav open' : 'hamburger-nav closed'}
         onClick={this.props.toggleNavOpen}
       >
@@ -14,7 +13,7 @@ export default class HamburgerNav extends Component {
         <span />
         <span />
         <span />
-      </Link>
+      </button>
     )
   }
 }
