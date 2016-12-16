@@ -1,16 +1,15 @@
 #Lacey Knaff's Portfolio
->a work in progress - last updated November 2016
+>a work in progress
 
 ##Built With
-* Sass
-* JavaScript
 * React
 * React Router
+* JavaScript
+* Sass
 * Greensock
 * Webpack
-* Git/GitHub
+* Git
 * Atom Text Editor
-* Terminal(iTerm)
 
 ##View
 [laceyknaff.com](http://www.laceyknaff.com/)

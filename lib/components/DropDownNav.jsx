@@ -34,7 +34,7 @@ export default class DropDownNav extends Component {
     const e3 = this.three
     const e4 = this.four
 
-    TweenMax.staggerTo(
+    TweenMax.staggerFrom(
       [e1, e2, e3, e4],
       1,
       {
