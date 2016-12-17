@@ -1,34 +1,38 @@
 import React, { Component } from 'react'
-import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
+import { TweenMax, staggerFrom, Power4 } from 'gsap'
 import { Router, Route, Link, browserHistory } from 'react-router'
 
-export default class SplitRightAbout extends Component {
-  gsapAnimationSlow() {
-    const e1 = this.one
-    const e2 = this.two
-    const e3 = this.three
-    const e4 = this.four
-    const e5 = this.five
-    const e6 = this.six
-    const e7 = this.seven
-    const e8 = this.eight
-    const e9 = this.nine
-    const e10 = this.ten
+export default class ProjectsFullPage extends Component {
+  componentDidMount() {
+    this.gsapAnimationBackground()
+  }
+  gsapAnimationBackground() {
+    const e = this.background
 
-    TweenMax.staggerFrom(
-      [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10],
+    TweenMax.to(
+      e,
       1,
       {
-        opacity: 0,
-        y: 50,
-        delay: 1.2,
-        ease: Power2.easeOut },
+        width: '100%',
+        ease: Power4.easeIn },
       0.12)
   }
   render() {
     return (
-      <section className="full-screen">
-        projects
+      <section
+        className="full-screen"
+        ref={(c) => { this.background = c }}
+      >
+        <div className="row">
+          <div className="project-grid project-grid-1">1</div>
+          <div className="project-grid project-grid-2">2</div>
+          <div className="project-grid project-grid-3">3</div>
+        </div>
+        <div className="row">
+          <div className="project-grid project-grid-4">4</div>
+          <div className="project-grid project-grid-5">5</div>
+          <div className="project-grid project-grid-6">6</div>
+        </div>
       </section>
     )
   }
