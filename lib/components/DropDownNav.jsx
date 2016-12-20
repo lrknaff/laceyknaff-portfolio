@@ -30,7 +30,7 @@ export default class DropDownNav extends Component {
         ease: Power2.easeOut },
       0.12)
   }
-  gsapAnimationOut() {
+  gsapAnimationOut(callback) {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
@@ -41,9 +41,11 @@ export default class DropDownNav extends Component {
       1,
       {
         opacity: 0,
-        y: 50,
+        y: -50,
         delay: 0.2,
-        ease: Power2.easeIn },
+        ease: Power2.easeIn,
+        onComplete: callback,
+      },
       0.12)
   }
   render() {
