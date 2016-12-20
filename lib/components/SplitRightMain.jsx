@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactTransitionGroup from 'react-addons-transition-group'
 import HamburgerNav from './HamburgerNav'
 import DropDownNav from './DropDownNav'
 
@@ -21,13 +22,15 @@ export default class SplitRightMain extends Component {
           toggleNavOpen={this.toggleNav.bind(this)}
           navOpen={this.state.navOpen}
         />
-        {this.state.navOpen ?
-          <DropDownNav
-            className="fake-nav"
-            toggleNavClosed={this.toggleNav.bind(this)}
-          /> :
-          null
-        }
+        <ReactTransitionGroup>
+          {this.state.navOpen ?
+            <DropDownNav
+              className="fake-nav"
+              toggleNavClosed={this.toggleNav.bind(this)}
+            /> :
+            null
+          }
+        </ReactTransitionGroup>
       </section>
     )
   }

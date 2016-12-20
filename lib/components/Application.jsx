@@ -6,7 +6,6 @@ import { TweenMax, staggerFrom, Back } from 'gsap'
 import Loader from './Loader'
 import SplitLeftMain from './SplitLeftMain'
 import SplitRightMain from './SplitRightMain'
-import HamburgerNav from './HamburgerNav'
 
 export default class Application extends Component {
   render() {
