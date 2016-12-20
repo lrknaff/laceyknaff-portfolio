@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Link } from 'react-router'
+import ReactTransitionGroup from 'react-addons-transition-group'
 import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
 
 export default class DropDownNav extends Component {
@@ -8,10 +9,10 @@ export default class DropDownNav extends Component {
   }
   componentWillLeave(callback) {
     console.log('Im out')
+    this.gsapAnimationOut()
     setTimeout(() => {
       callback()
     }, 400)
-    this.gsapAnimationOut()
   }
   gsapAnimationIn() {
     const e1 = this.one
@@ -29,7 +30,7 @@ export default class DropDownNav extends Component {
         ease: Power2.easeOut },
       0.12)
   }
-  gsapAnimationOut() {
+  gsapAnimationOut(callback) {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
@@ -40,9 +41,11 @@ export default class DropDownNav extends Component {
       1,
       {
         opacity: 0,
-        y: 50,
+        y: -50,
         delay: 0.2,
-        ease: Power2.easeIn },
+        ease: Power2.easeIn,
+        onComplete: callback,
+      },
       0.12)
   }
   render() {
