@@ -90,9 +90,9 @@ body {
 /* projects */
 .full-screen {
   align-items: flex-start;
-  height: 100%;
-  width: 50%;
-  background-color: white;
+  height: 0;
+  width: 100%;
+  background-color: #484848;
   position: absolute;
   right: 0;
   z-index: 9;
@@ -112,6 +112,7 @@ body {
 }
 
 .project-grid {
-  border: 1px solid black;
-  width: 33.1%;
+  border: 2px solid black;
+  width: 33vw;
+  height: 33vw;
 }
