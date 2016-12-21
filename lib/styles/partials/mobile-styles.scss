@@ -1,0 +1,16 @@
+@media screen and (max-width: 630px) {
+  .split-left-container {
+    position: relative;
+    width: 100%;
+  }
+  .split-right-container {
+    background: white;
+    width: 100%;
+    overflow: visible;
+    top: 100%;
+  }
+  .split-right-nav-open {
+    position: fixed;
+    width: 100%;
+  }
+}
