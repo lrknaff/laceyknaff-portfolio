@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import ReactTransitionGroup from 'react-addons-transition-group'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import { TweenMax, staggerFrom, Back } from 'gsap'
 

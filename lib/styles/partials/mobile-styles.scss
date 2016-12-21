@@ -1,0 +1,21 @@
+@media screen and (max-width: 630px) {
+  .split-left-container {
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+  }
+  .split-right-container {
+    background: white;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    top: 100%;
+  }
+  .split-right-nav-open {
+    position: fixed;
+    width: 100%;
+  }
+  .full-screen-nav {
+    margin-top: 28vh;
+  }
+}

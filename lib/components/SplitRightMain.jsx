@@ -22,15 +22,12 @@ export default class SplitRightMain extends Component {
           toggleNavOpen={this.toggleNav.bind(this)}
           navOpen={this.state.navOpen}
         />
-        <ReactTransitionGroup>
-          {this.state.navOpen ?
-            <DropDownNav
-              className="fake-nav"
-              toggleNavClosed={this.toggleNav.bind(this)}
-            /> :
-            null
-          }
-        </ReactTransitionGroup>
+        {this.state.navOpen ?
+          <DropDownNav
+            toggleNavClosed={this.toggleNav.bind(this)}
+          /> :
+          null
+        }
       </section>
     )
   }

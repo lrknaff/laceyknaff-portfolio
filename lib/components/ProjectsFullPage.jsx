@@ -13,7 +13,7 @@ export default class ProjectsFullPage extends Component {
       e,
       1,
       {
-        width: '100%',
+        height: '100%',
         ease: Power4.easeIn },
       0.12)
   }
