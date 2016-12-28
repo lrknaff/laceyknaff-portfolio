@@ -30,7 +30,7 @@ export default class SplitRightAbout extends Component {
       <section className="split-right split-right-container">
         <section className="split-right-contact-me">
           <h4 ref={(c) => { this.one = c }}>Say Hello</h4>
-          <p ref={(c) => { this.two = c }}>I'm always open to <span className="contact-p">new opportunities</span> (full-time, freelance and contract). Email me at <span className="contact-p">lacey@odindenver.com</span> if you’re interested in working together.</p>
+          <p ref={(c) => { this.two = c }}>I'm always open to <span className="contact-p">new opportunities</span> (full-time, freelance and contract). Email me at <span className="contact-p"><a href="mailto:lacey@odindenver.com">lacey@odindenver.com</a></span> if you’re interested in working together.</p>
         </section>
       </section>
     )

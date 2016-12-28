@@ -46,21 +46,33 @@ export default class SplitLeftMain extends Component {
             className="split-left-social"
             ref={(c) => { this.four = c }}
           >
-            <a href="https://twitter.com/laceyknaff">
+            <a
+              href="https://twitter.com/laceyknaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="../lib/images/twitter.svg"
                 className="social-icon"
                 alt="twitter"
               />
             </a>
-            <a href="https://github.com/lrknaff">
+            <a
+              href="https://github.com/lrknaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="../lib/images/gitHub.svg"
                 className="social-icon"
                 alt="git hub"
               />
             </a>
-            <a href="https://www.linkedin.com/in/lacey-knaff-7a503233">
+            <a
+              href="https://www.linkedin.com/in/lacey-knaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="../lib/images/linkedin.svg"
                 className="social-icon"

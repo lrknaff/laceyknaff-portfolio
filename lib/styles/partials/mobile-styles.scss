@@ -9,13 +9,17 @@
     height: auto;
     width: 100%;
     overflow: visible;
-    top: 100%;
   }
   .split-right-nav-open {
     position: fixed;
     width: 100%;
   }
   .full-screen-nav {
-    margin-top: 28vh;
+    margin-top: 25vh;
+  }
+  .split-right-contact-me {
+    margin: 71% auto;
+    top: 0;
+    transform: none;
   }
 }
