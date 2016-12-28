@@ -86,7 +86,11 @@ export default class DropDownNav extends Component {
             className="menu-item"
             ref={(c) => { this.four = c }}
           >
-            <a href="#Blog">Blog</a>
+            <a
+              href="https://medium.com/@lacey.k"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Blog</a>
           </li>
         </ul>
       </nav>
