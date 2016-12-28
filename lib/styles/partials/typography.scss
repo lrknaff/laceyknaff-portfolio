@@ -50,4 +50,8 @@ p {
 a {
   color: $pop-color;
   text-decoration: none;
+
+  .active {
+    color: $pop-color;
+  }
 }

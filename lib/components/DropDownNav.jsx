@@ -59,6 +59,7 @@ export default class DropDownNav extends Component {
             <Link
               to="/About"
               onClick={this.props.toggleNavClosed}
+              activeClassName="active"
             >About</Link>
           </li>
           <li
@@ -68,6 +69,7 @@ export default class DropDownNav extends Component {
             <Link
               to="/Projects"
               onClick={this.props.toggleNavClosed}
+              activeClassName="active"
             >Projects</Link>
           </li>
           <li
@@ -77,6 +79,7 @@ export default class DropDownNav extends Component {
             <Link
               to="/Contact"
               onClick={this.props.toggleNavClosed}
+              activeClassName="active"
             >Contact</Link>
           </li>
           <li
