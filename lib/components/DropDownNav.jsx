@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import ReactTransitionGroup from 'react-addons-transition-group'
-import { TweenMax, staggerFrom, staggerTo, Power2, Bounce } from 'gsap'
+import { TweenMax, staggerFrom, staggerTo, Power2, Power4, Bounce } from 'gsap'
 
 export default class DropDownNav extends Component {
   componentDidMount() {
+    this.gsapAnimationBackground()
     this.gsapAnimationIn()
+    console.log('animating')
   }
   componentWillLeave(callback) {
     console.log('Im out')
@@ -26,7 +28,7 @@ export default class DropDownNav extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 0.2,
+        delay: 0.75,
         ease: Power2.easeOut },
       0.12)
   }
@@ -42,15 +44,29 @@ export default class DropDownNav extends Component {
       {
         opacity: 0,
         y: -50,
-        delay: 0.2,
+        delay: 0.12,
         ease: Power2.easeOut,
         onComplete: callback,
       },
     )
   }
+  gsapAnimationBackground() {
+    const e = this.background
+
+    TweenMax.to(
+      e,
+      1,
+      {
+        height: '100vh',
+        ease: Power2.easeIn },
+    )
+  }
   render() {
     return (
-      <nav className="split-right split-right-nav">
+      <nav
+        className="split-right split-right-nav"
+        ref={(c) => { this.background = c }}
+      >
         <ul className="full-screen-nav">
           <li
             className="about-link menu-item"
@@ -67,10 +83,10 @@ export default class DropDownNav extends Component {
             ref={(c) => { this.two = c }}
           >
             <Link
-              to="/Projects"
+              to="/Work"
               onClick={this.props.toggleNavClosed}
               activeClassName="active"
-            >Projects</Link>
+            >Work</Link>
           </li>
           <li
             className="menu-item"
