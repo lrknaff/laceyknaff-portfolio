@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactTransitionGroup from 'react-addons-transition-group'
+import { TweenMax, staggerFrom, staggerTo, Power4, Bounce } from 'gsap'
 import HamburgerNav from './HamburgerNav'
 import DropDownNav from './DropDownNav'
 
@@ -17,7 +18,9 @@ export default class SplitRightMain extends Component {
   }
   render() {
     return (
-      <section className={this.state.navOpen ? 'split-right-nav-open' : 'split-right-closed'}>
+      <section
+        className={this.state.navOpen ? 'split-right-nav-open' : 'split-right-closed'}
+      >
         <HamburgerNav
           toggleNavOpen={this.toggleNav.bind(this)}
           navOpen={this.state.navOpen}

@@ -1,13 +1,14 @@
 /* hamburger nav styles */
 .hamburger-nav {
-  background: white;
+  background: none;
   border-style: none;
-  height: 25px;
+  border: 1.5px solid #32dbb7;
+  height: 47px;
   outline: none;
   position: fixed;
   right: 35px;
   top: 35px;
-  width: 30px;
+  width: 47px;
   transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -19,15 +20,19 @@
   cursor: pointer;
   z-index: 9999;
 
+  &:hover {
+    background: $pop-color;
+  }
+
   span {
     background: #484848;
     border-radius: 4px;
     display: block;
-    height: 3px;
+    height: 1px;
     opacity: 1;
     position: absolute;
-    width: 90%;
-    left: 0;
+    width: 41%;
+    left: 13px;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -40,15 +45,15 @@
 }
 
 .hamburger-nav span:nth-child(1) {
-  top: 0px;
+  top: 18px;
 }
 
 .hamburger-nav span:nth-child(2),.hamburger-nav span:nth-child(3) {
-  top: 8px;
+  top: 22px;
 }
 
 .hamburger-nav span:nth-child(4) {
-  top: 16px;
+  top: 26px;
 }
 
 .hamburger-nav.open span:nth-child(1) {
@@ -58,6 +63,7 @@
 }
 
 .hamburger-nav.open span:nth-child(2) {
+  background: white;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -65,6 +71,7 @@
 }
 
 .hamburger-nav.open span:nth-child(3) {
+  background: white;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -85,15 +92,18 @@
 
 .full-screen-nav {
   text-align: center;
-  margin-top: 30vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 
   a {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 2em;
+    font-size: 2.2em;
+    letter-spacing: 1.5px;
     text-decoration: none;
-    color: #484848;
+    color: white;
     line-height: 2.5em;
     transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
@@ -111,9 +121,9 @@
 
 .split-right-nav-open {
   background: white;
-  height: 100%;
+  height: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
   right: 0;
   z-index: 999;
 }
@@ -127,4 +137,22 @@
 
 .full-screen-nav a.active {
   color: $pop-color;
+}
+
+.split-right-nav {
+  width: 100%;
+  height: 0;
+  background: #333;
+  position: absolute;
+}
+
+.nav-social {
+  margin: 0 auto;
+  position: relative;
+  width: 117px;
+  top: 90px;
+
+  .social-icon {
+    padding: 7px;
+  }
 }
