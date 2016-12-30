@@ -7,23 +7,16 @@ export default class DropDownNav extends Component {
   componentDidMount() {
     this.gsapAnimationBackground()
     this.gsapAnimationIn()
-    console.log('animating')
-  }
-  componentWillLeave(callback) {
-    console.log('Im out')
-    setTimeout(() => {
-      callback()
-    }, 1000)
-    this.gsapAnimationOut()
   }
   gsapAnimationIn() {
     const e1 = this.one
     const e2 = this.two
     const e3 = this.three
     const e4 = this.four
+    const e5 = this.five
 
     TweenMax.staggerFrom(
-      [e1, e2, e3, e4],
+      [e1, e2, e3, e4, e5],
       1,
       {
         opacity: 0,
@@ -31,24 +24,6 @@ export default class DropDownNav extends Component {
         delay: 0.75,
         ease: Power2.easeOut },
       0.12)
-  }
-  gsapAnimationOut(callback) {
-    const e1 = this.one
-    const e2 = this.two
-    const e3 = this.three
-    const e4 = this.four
-
-    TweenMax.staggerTo(
-      [e1, e2, e3, e4],
-      1,
-      {
-        opacity: 0,
-        y: -50,
-        delay: 0.12,
-        ease: Power2.easeOut,
-        onComplete: callback,
-      },
-    )
   }
   gsapAnimationBackground() {
     const e = this.background
@@ -108,6 +83,44 @@ export default class DropDownNav extends Component {
               rel="noopener noreferrer"
             >Blog</a>
           </li>
+          <div
+            className="split-left-social nav-social"
+            ref={(c) => { this.five = c }}
+          >
+            <a
+              href="https://twitter.com/laceyknaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../lib/images/twitter.svg"
+                className="social-icon"
+                alt="twitter"
+              />
+            </a>
+            <a
+              href="https://github.com/lrknaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../lib/images/gitHub.svg"
+                className="social-icon"
+                alt="git hub"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lacey-knaff"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../lib/images/linkedin.svg"
+                className="social-icon"
+                alt="linkedin"
+              />
+            </a>
+          </div>
         </ul>
       </nav>
     )

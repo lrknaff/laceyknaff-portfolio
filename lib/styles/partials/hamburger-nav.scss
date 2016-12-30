@@ -92,7 +92,9 @@
 
 .full-screen-nav {
   text-align: center;
-  margin-top: 28vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 
   a {
     font-family: 'Playfair Display', serif;
@@ -134,7 +136,7 @@
 }
 
 .full-screen-nav a.active {
-  color: white;
+  color: $pop-color;
 }
 
 .split-right-nav {
@@ -142,4 +144,15 @@
   height: 0;
   background: #333;
   position: absolute;
+}
+
+.nav-social {
+  margin: 0 auto;
+  position: relative;
+  width: 117px;
+  top: 90px;
+
+  .social-icon {
+    padding: 7px;
+  }
 }
