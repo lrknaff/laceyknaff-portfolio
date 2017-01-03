@@ -26,9 +26,10 @@ export default class SplitRightAbout extends Component {
     const e8 = this.eight
     const e9 = this.nine
     const e10 = this.ten
+    const e11 = this.eleven
 
     TweenMax.staggerFrom(
-      [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10],
+      [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11],
       1,
       {
         opacity: 0,
@@ -118,7 +119,10 @@ export default class SplitRightAbout extends Component {
           </div>
         </section>
 
-        <button className="button light-background-button">view projects</button>
+        <button
+          className="button light-background-button"
+          ref={(c) => { this.eleven = c }}
+        >view projects</button>
       </section>
     )
   }

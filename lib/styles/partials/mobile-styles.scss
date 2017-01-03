@@ -1,8 +1,15 @@
 @media screen and (max-width: 630px) {
+  h4 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 18px;
+  }
+  ul.skills li {
+    font-size: 14px;
+  }
   .split-left-container {
-    background-size: cover;
-    position: fixed;
-    width: 100%;
+    display: none;
   }
   .split-right-container {
     background: white;
