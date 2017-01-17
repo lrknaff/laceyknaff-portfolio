@@ -7,7 +7,7 @@ export default class ProjectsFullPage extends Component {
     this.gsapAnimationBackground()
   }
   gsapAnimationBackground() {
-    const e = this.background
+    const e = this.view
 
     TweenMax.to(
       e,
@@ -19,21 +19,20 @@ export default class ProjectsFullPage extends Component {
   }
   render() {
     return (
-      <section
-        className="full-screen"
-        ref={(c) => { this.background = c }}
-      >
-        <div className="row">
-          <div className="project-grid project-grid-1">1</div>
-          <div className="project-grid project-grid-2">2</div>
-          <div className="project-grid project-grid-3">3</div>
-        </div>
-        <div className="row">
-          <div className="project-grid project-grid-4">4</div>
-          <div className="project-grid project-grid-5">5</div>
-          <div className="project-grid project-grid-6">6</div>
-        </div>
-      </section>
+      <article>
+        <section className="split-right split-right-container split-right-projects">
+          <div>Project Descriptions</div>
+          <div className="project-nav">
+            <div className="project-scroll-nav" />
+            <div className="project-scroll-nav" />
+            <div className="project-scroll-nav" />
+            <div className="project-scroll-nav" />
+          </div>
+        </section>
+        <section className="split-left-container split-left-projects">
+          <div>Project View</div>
+        </section>
+      </article>
     )
   }
 }

@@ -88,31 +88,21 @@ body {
 }
 
 /* projects */
-.full-screen {
-  align-items: flex-start;
-  height: 0;
-  width: 100%;
-  background-color: #484848;
-  position: absolute;
-  right: 0;
-  z-index: 9;
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: center;
+.split-right-projects, .split-left-projects {
+  height: 100%;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  height: 50%;
-  width: 100%;
+.split-right-projects {
+  background: magenta;
 }
 
-.project-grid {
-  border: 2px solid black;
-  width: 33vw;
-  height: 33vw;
+.split-left-projects {
+  background: aqua;
+}
+
+.project-scroll-nav {
+  margin-top: 50px;
+  width: 100px;
+  height: 2px;
+  background: grey;
 }
