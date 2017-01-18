@@ -51,14 +51,17 @@ export default class SplitRightAbout extends Component {
           className="split-right-about-me section-spacing"
         >
           <h4 ref={(c) => { this.one = c }}>About</h4>
-          <p ref={(c) => { this.two = c }}>Lacey is a designer and front-end developer with a passion for turning complex ideas into simple, purpose driven, solutions. After dabbling in far too many design related fields she finally found her passion for developing and designing on the web and is known for her clean and minimal design aesthetic. She is available for full-time and freelance hire, and would love to <Link to="/Contact">work with you.</Link><span><br />These are some skills and programs she uses along the way:</span></p>
+          <p ref={(c) => { this.two = c }}>Lacey is a self-taught designer, school taught front-end developer, and lifelong learner. She is a firm believer that the whole is greater than the sum of its parts, and that designers and developers who work together can create longer lasting, more thoughtful, user experiences. Her goal is to craft user narratives that satisfy business objectives through design and development solutions. In her free time you'll probably find her outdoors or learning something new.
+          She is available for full-time and freelance hire, and would love to <Link to="/Contact">work with you.</Link><span>
+          <br />
+          These are some skills and programs she uses along the way:</span></p>
           <ul
             className="skills"
             ref={(c) => { this.three = c }}
           >
             <li><span>Adobe Creative Suite, Sketch App</span></li>
             <li><span>JavaScript, jQuery, Sass, HTML, CSS, Git</span></li>
-            <li><span>React, React Router, Redux, Ember</span></li>
+            <li><span>React, React Router, Redux, Ember, Express.js</span></li>
             <li><span>Mocha, Chai, Enzyme, Jest, Selenium</span></li>
           </ul>
         </section>
@@ -119,10 +122,15 @@ export default class SplitRightAbout extends Component {
           </div>
         </section>
 
-        <button
-          className="button light-background-button"
-          ref={(c) => { this.eleven = c }}
-        >view projects</button>
+        <Link
+          to="/Work"
+        >
+          <button
+            className="button light-background-button"
+            ref={(c) => { this.eleven = c }}
+          >view projects
+          </button>
+        </Link>
       </section>
     )
   }
