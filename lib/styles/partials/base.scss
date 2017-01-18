@@ -88,31 +88,70 @@ body {
 }
 
 /* projects */
-.full-screen {
-  align-items: flex-start;
-  height: 0;
-  width: 100%;
-  background-color: #484848;
-  position: absolute;
+.split-right-projects, .split-left-projects {
+  height: 100%;
+}
+
+.split-right-project {
+  background: white;
+}
+
+.split-right-project-copy {
+  width: 65%;
+  position: relative;
+  margin-left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  button {
+    margin: 1.8em 0;
+  }
+}
+
+#momoney {
+  background: $light-grey;
+}
+
+.project-nav {
+  top: 42vh;
   right: 0;
-  z-index: 9;
-  display: flex;
-  justify-content: flex-start;
-  flex: 1;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: center;
+  position: fixed;
+
+  button {
+    border-style: none;
+    display: block;
+    background: none;
+    text-align: right;
+    outline: none;
+    width: 50px;
+    height: 20px;
+    padding: 0;
+    margin-left: 50%;
+
+    :focus {
+      outline: none;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  height: 50%;
-  width: 100%;
+
+.project-scroll-nav {
+  width: 25px;
+  height: 1px;
+  background: #cdcdcd;
+  right: 0;
+  transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
 }
 
-.project-grid {
-  border: 2px solid black;
-  width: 33vw;
-  height: 33vw;
+#project-scroll-active {
+  width: 50px;
+  height: 1.5px;
+  background: $pop-color;
+  position: absolute;
 }
