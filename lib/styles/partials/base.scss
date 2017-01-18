@@ -92,17 +92,32 @@ body {
   height: 100%;
 }
 
-.split-right-projects {
-  background: magenta;
+.split-right-project {
+  background: white;
 }
 
-.split-left-projects {
-  background: aqua;
+.split-right-project-copy {
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+#momoney {
+  background: #efefef;
+}
+
+.project-nav {
+  top: 25vh;
+  right: 0;
+  position: fixed;
+}
+
 
 .project-scroll-nav {
-  margin-top: 50px;
-  width: 100px;
-  height: 2px;
-  background: grey;
+  margin-top: 20px;
+  width: 50px;
+  height: 1px;
+  background: $medium-grey;
 }

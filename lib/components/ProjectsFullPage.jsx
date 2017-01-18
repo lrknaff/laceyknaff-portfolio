@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import { TweenMax, staggerFrom, Power4 } from 'gsap'
 import { Router, Route, Link, browserHistory } from 'react-router'
+import Projects from '../projects/projects.js'
 
 export default class ProjectsFullPage extends Component {
+  constructor() {
+    super()
+    this.state = {
+      index: 0,
+    }
+  }
   componentDidMount() {
     this.gsapAnimationBackground()
   }
@@ -21,7 +28,18 @@ export default class ProjectsFullPage extends Component {
     return (
       <article>
         <section className="split-right split-right-container split-right-projects">
-          <div>Project Descriptions</div>
+          <section className="split-right-project-copy">
+            <h4>{Projects[this.state.index].title}</h4>
+            <p>{Projects[this.state.index].description}</p>
+            <a
+              href={Projects[this.state.index].url}
+              target="blank"
+            >
+              <button
+                className="button light-background-button"
+              >view</button>
+            </a>
+          </section>
           <div className="project-nav">
             <div className="project-scroll-nav" />
             <div className="project-scroll-nav" />
@@ -29,8 +47,12 @@ export default class ProjectsFullPage extends Component {
             <div className="project-scroll-nav" />
           </div>
         </section>
-        <section className="split-left-container split-left-projects">
+        <section
+          className="split-left-container split-left-projects"
+          id={Projects[this.state.index].id}
+        >
           <div>Project View</div>
+          <img src={Projects[this.state.index].image1} />
         </section>
       </article>
     )
