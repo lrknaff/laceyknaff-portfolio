@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TweenMax, staggerFrom, Power4 } from 'gsap'
+import { TweenMax, staggerFrom, Power2 } from 'gsap'
 import { Router, Route, Link, browserHistory } from 'react-router'
 import Projects from '../projects/projects.js'
 
@@ -11,40 +11,57 @@ export default class ProjectsFullPage extends Component {
     }
   }
   componentDidMount() {
-    this.gsapAnimationBackground()
+    this.gsapAnimationProjectCopy()
   }
-  gsapAnimationBackground() {
-    const e = this.view
+  gsapAnimationProjectCopy() {
+    const e1 = this.one
+    const e2 = this.two
+    const e3 = this.three
+    const e4 = this.four
+    const e5 = this.five
 
-    TweenMax.to(
-      e,
+    TweenMax.staggerFrom(
+      [e1, e2, e3, e4, e5],
       1,
       {
-        height: '100%',
-        ease: Power4.easeIn },
+        opacity: 0,
+        y: 50,
+        delay: 0.5,
+        ease: Power2.easeOut },
       0.12)
   }
   handleScroll() {
-    if (this.state.index < 5) {
-      this.setState({ index: this.state.index + 1 })
-    } this.setState({ index: this.state.index + 0 })
+    // if (this.state.index < 5) {
+    //   this.setState({ index: this.state.index + 1 })
+    // } this.setState({ index: this.state.index + 0 })
   }
   handlePaginationClick(e) {
-    // e.preventDefault()
+    e.preventDefault()
     const value = parseInt(e.target.value, 10)
+    console.log(e.target.value)
     this.setState({ index: value })
+    this.gsapAnimationProjectCopy()
   }
   render() {
     return (
       <article>
         <section className="split-right split-right-container split-right-projects">
           <section className="split-right-project-copy">
-            <h4>{Projects[this.state.index].title}</h4>
-            <p>{Projects[this.state.index].description}</p>
-            <h6>Skills used: {Projects[this.state.index].skills}</h6>
+            <h4 ref={(c) => { this.one = c }}>{Projects[this.state.index].title}</h4>
+            <p ref={(c) => { this.two = c }}>{Projects[this.state.index].description}</p>
+            <p ref={(c) => { this.three = c }}>
+              <a
+                href={Projects[this.state.index].github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >view on GitHub</a>
+            </p>
+            <h6 ref={(c) => { this.four = c }}>Skills used: {Projects[this.state.index].skills}</h6>
             <a
+              ref={(c) => { this.five = c }}
               href={Projects[this.state.index].url}
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <button
                 className="button light-background-button"
