@@ -24,6 +24,16 @@ export default class ProjectsFullPage extends Component {
         ease: Power4.easeIn },
       0.12)
   }
+  handleScroll() {
+    if (this.state.index < 5) {
+      this.setState({ index: this.state.index + 1 })
+    } this.setState({ index: this.state.index + 0 })
+  }
+  handlePaginationClick(e) {
+    // e.preventDefault()
+    const value = parseInt(e.target.value, 10)
+    this.setState({ index: value })
+  }
   render() {
     return (
       <article>
@@ -42,10 +52,51 @@ export default class ProjectsFullPage extends Component {
             </a>
           </section>
           <div className="project-nav">
-            <div className="project-scroll-nav" />
-            <div className="project-scroll-nav" />
-            <div className="project-scroll-nav" />
-            <div className="project-scroll-nav" />
+            <button
+              value="0"
+              onClick={this.handlePaginationClick.bind(this)}
+            >
+              <div
+                className="project-scroll-nav"
+                id={this.state.index === 0 ? 'project-scroll-active' : null}
+              />
+            </button>
+            <button
+              value="1"
+              onClick={this.handlePaginationClick.bind(this)}
+            >
+              <div
+                className="project-scroll-nav"
+                id={this.state.index === 1 ? 'project-scroll-active' : null}
+              />
+            </button>
+            <button
+              value="2"
+              onClick={this.handlePaginationClick.bind(this)}
+            >
+              <div
+                className="project-scroll-nav"
+                id={this.state.index === 2 ? 'project-scroll-active' : null}
+              />
+            </button>
+            <button
+              value="3"
+              onClick={this.handlePaginationClick.bind(this)}
+            >
+              <div
+                className="project-scroll-nav"
+                id={this.state.index === 3 ? 'project-scroll-active' : null}
+              />
+            </button>
+            <button
+              value="4"
+              onClick={this.handlePaginationClick.bind(this)}
+            >
+              <div
+                className="project-scroll-nav"
+                id={this.state.index === 4 ? 'project-scroll-active' : null}
+              />
+            </button>
           </div>
         </section>
 
