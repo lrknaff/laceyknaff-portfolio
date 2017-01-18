@@ -31,6 +31,7 @@ export default class ProjectsFullPage extends Component {
           <section className="split-right-project-copy">
             <h4>{Projects[this.state.index].title}</h4>
             <p>{Projects[this.state.index].description}</p>
+            <h6>Skills used: {Projects[this.state.index].skills}</h6>
             <a
               href={Projects[this.state.index].url}
               target="blank"
@@ -47,12 +48,14 @@ export default class ProjectsFullPage extends Component {
             <div className="project-scroll-nav" />
           </div>
         </section>
+
         <section
           className="split-left-container split-left-projects"
           id={Projects[this.state.index].id}
         >
-          <div>Project View</div>
-          <img src={Projects[this.state.index].image1} />
+          <div>
+            <img src={Projects[this.state.index].image1} />
+          </div>
         </section>
       </article>
     )

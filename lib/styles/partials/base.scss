@@ -97,27 +97,31 @@ body {
 }
 
 .split-right-project-copy {
-  width: 80%;
+  width: 60%;
   position: relative;
-  margin: 0 auto;
+  margin-left: 10%;
   top: 50%;
   transform: translateY(-50%);
+
+  button {
+    margin: 1.8em 0;
+  }
 }
 
 #momoney {
-  background: #efefef;
+  background: $light-grey;
 }
 
 .project-nav {
-  top: 25vh;
-  right: 0;
+  top: 45vh;
+  right: 35px;
   position: fixed;
 }
 
 
 .project-scroll-nav {
-  margin-top: 20px;
-  width: 50px;
+  margin-top: 15px;
+  width: 25px;
   height: 1px;
-  background: $medium-grey;
+  background: #cdcdcd;
 }
