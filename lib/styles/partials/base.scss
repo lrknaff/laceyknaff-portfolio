@@ -101,7 +101,7 @@ body {
   }
   img {
     position: relative;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -129,15 +129,25 @@ body {
   background: #484848;
 }
 
+#shoot-the-breeze {
+  background: $dark-grey;
+}
+
 .project-nav {
   position: relative;
   top: 30%;
   transform: translateY(-50%);
+  width: 50vw;
+  margin-top: 50px;
 
   button {
+    color: #484848;
     border-style: none;
     background: none;
     outline: none;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 
     :focus {
       outline: none;
@@ -145,6 +155,7 @@ body {
 
     :hover {
       cursor: pointer;
+      color: $pop-color;
     }
   }
 }
@@ -155,28 +166,10 @@ body {
 
 .project-nav-previous {
   float: left;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .project-nav-next {
   float: right;
-  margin-right: 40px;
+  margin-right: 50px;
 }
-
-
-// .project-scroll-nav {
-//   width: 25px;
-//   height: 1px;
-//   background: #cdcdcd;
-//   right: 0;
-//   transition: all .25s ease-in-out;
-//   -moz-transition: all .25s ease-in-out;
-//   -webkit-transition: all .25s ease-in-out;
-// }
-//
-// #project-scroll-active {
-//   width: 50px;
-//   height: 1.5px;
-//   background: $pop-color;
-//   position: absolute;
-// }

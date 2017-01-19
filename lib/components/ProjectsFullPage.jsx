@@ -11,7 +11,20 @@ export default class ProjectsFullPage extends Component {
     }
   }
   componentDidMount() {
+    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+  }
+  gsapAnimationProject() {
+    const e0 = this.zero
+
+    TweenMax.from(
+      e0, 0.5,
+      {
+        opacity: 0,
+        ease: Power2.easeIn,
+        x: -300,
+      },
+    )
   }
   gsapAnimationProjectCopy() {
     const e1 = this.one
@@ -26,18 +39,20 @@ export default class ProjectsFullPage extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 0.5,
+        delay: 0.7,
         ease: Power2.easeOut },
       0.12)
   }
   handlePaginationClickNext(e) {
     e.preventDefault()
     this.setState({ index: this.state.index + 1 })
+    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
   }
   handlePaginationClickPrevious(e) {
     e.preventDefault()
     this.setState({ index: this.state.index - 1 })
+    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
   }
   render() {
@@ -94,7 +109,10 @@ export default class ProjectsFullPage extends Component {
           id={Projects[this.state.index].id}
         >
           <div>
-            <img src={Projects[this.state.index].image1} />
+            <img
+              src={Projects[this.state.index].image1}
+              ref={(c) => { this.zero = c }}
+            />
           </div>
         </section>
       </article>
