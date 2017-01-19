@@ -133,6 +133,14 @@ body {
   background: $dark-grey;
 }
 
+#crocs {
+  background: $pop-color;
+}
+
+#branding {
+  background: $light-grey;
+}
+
 .project-nav {
   position: relative;
   top: 30%;
@@ -166,10 +174,10 @@ body {
 
 .project-nav-previous {
   float: left;
-  margin-left: 50px;
+  margin-left: 55px;
 }
 
 .project-nav-next {
   float: right;
-  margin-right: 50px;
+  margin-right: 55px;
 }
