@@ -28,4 +28,18 @@
     top: 0;
     transform: none;
   }
+  .nav-social {
+    top: 20px;
+  }
+  .work-description {
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger-nav {
+    background: $pop-color;
+  }
 }
