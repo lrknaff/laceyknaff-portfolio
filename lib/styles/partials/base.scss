@@ -130,20 +130,15 @@ body {
 }
 
 .project-nav {
-  top: 42vh;
-  right: 0;
-  position: fixed;
+  top: 90vh;
 
   button {
     border-style: none;
     display: block;
     background: none;
-    text-align: right;
     outline: none;
     width: 50px;
     height: 20px;
-    padding: 0;
-    margin-left: 50%;
 
     :focus {
       outline: none;
@@ -155,20 +150,24 @@ body {
   }
 }
 
-
-.project-scroll-nav {
-  width: 25px;
-  height: 1px;
-  background: #cdcdcd;
-  right: 0;
-  transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s ease-in-out;
+.project-nav-previous-none, .project-nav-next-none {
+  display: none;
 }
 
-#project-scroll-active {
-  width: 50px;
-  height: 1.5px;
-  background: $pop-color;
-  position: absolute;
-}
+
+// .project-scroll-nav {
+//   width: 25px;
+//   height: 1px;
+//   background: #cdcdcd;
+//   right: 0;
+//   transition: all .25s ease-in-out;
+//   -moz-transition: all .25s ease-in-out;
+//   -webkit-transition: all .25s ease-in-out;
+// }
+//
+// #project-scroll-active {
+//   width: 50px;
+//   height: 1.5px;
+//   background: $pop-color;
+//   position: absolute;
+// }

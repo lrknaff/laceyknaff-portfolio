@@ -30,16 +30,14 @@ export default class ProjectsFullPage extends Component {
         ease: Power2.easeOut },
       0.12)
   }
-  handleScroll() {
-    // if (this.state.index < 5) {
-    //   this.setState({ index: this.state.index + 1 })
-    // } this.setState({ index: this.state.index + 0 })
-  }
-  handlePaginationClick(e) {
+  handlePaginationClickNext(e) {
     e.preventDefault()
-    const value = parseInt(e.target.value, 10)
-    console.log(e.target.value)
-    this.setState({ index: value })
+    this.setState({ index: this.state.index + 1 })
+    this.gsapAnimationProjectCopy()
+  }
+  handlePaginationClickPrevious(e) {
+    e.preventDefault()
+    this.setState({ index: this.state.index - 1 })
     this.gsapAnimationProjectCopy()
   }
   render() {
@@ -68,50 +66,24 @@ export default class ProjectsFullPage extends Component {
               >view</button>
             </a>
           </section>
+
           <div className="project-nav">
+          <button
+            onClick={this.handlePaginationClickPrevious.bind(this)}
+            className={this.state.index === 0 ? 'project-nav-previous-none' : 'project-nav-previous'}
+          >
+            <p>{this.state.index === 0 ? '' : Projects[this.state.index - 1].title}</p>
+            <div
+              className="arrow previous-arrow"
+            />
+          </button>
             <button
-              value="0"
-              onClick={this.handlePaginationClick.bind(this)}
+              onClick={this.handlePaginationClickNext.bind(this)}
+              className={this.state.index === 5 ? 'project-nav-next-none' : 'project-nav-next'}
             >
+              <p>{this.state.index === 5 ? '' : Projects[this.state.index + 1].title}</p>
               <div
-                className="project-scroll-nav"
-                id={this.state.index === 0 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="1"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 1 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="2"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 2 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="3"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 3 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="4"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 4 ? 'project-scroll-active' : null}
+                className="arrow next-arrow"
               />
             </button>
           </div>
