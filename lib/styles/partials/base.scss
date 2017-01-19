@@ -93,9 +93,15 @@ body {
 }
 
 .split-left-projects {
+  div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
   img {
     position: relative;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -117,6 +123,10 @@ body {
 
 #momoney {
   background: $light-grey;
+}
+
+#masv {
+  background: #484848;
 }
 
 .project-nav {
