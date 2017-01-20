@@ -135,6 +135,18 @@ body {
 
 #crocs {
   background: $pop-color;
+
+  img {
+    width: 80%;
+  }
+}
+
+#crocs-right {
+  p {
+    a {
+      display: none;
+    }
+  }
 }
 
 #branding {

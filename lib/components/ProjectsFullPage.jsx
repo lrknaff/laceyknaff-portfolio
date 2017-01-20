@@ -59,7 +59,7 @@ export default class ProjectsFullPage extends Component {
     return (
       <article>
         <section className="split-right split-right-container split-right-projects">
-          <section className="split-right-project-copy">
+          <section className="split-right-project-copy" id={Projects[this.state.index].id2}>
             <h4 ref={(c) => { this.one = c }}>{Projects[this.state.index].title}</h4>
             <p ref={(c) => { this.two = c }}>{Projects[this.state.index].description}</p>
             <p ref={(c) => { this.three = c }}>
