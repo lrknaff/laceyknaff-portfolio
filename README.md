@@ -1,5 +1,5 @@
 #Lacey Knaff's Portfolio
->a work in progress
+>My personal portfolio.
 
 ##Built With
 * React
@@ -8,11 +8,10 @@
 * Sass
 * Greensock
 * Webpack
-* Git
 * Atom Text Editor
 
 ##View
-[laceyknaff.com](http://www.laceyknaff.com/)
+[www.lacey-knaff.com](http://www.lacey-knaff.com/)
 
 ##Work With Me
 I'd love to work with you too! Feel free to contact me at lacey.knaff@gmail.com. Full-time and Freelancing inquiries welcome. You can [view my resumé here](https://lrknaff.github.io/resume/).
