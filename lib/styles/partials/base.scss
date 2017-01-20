@@ -122,7 +122,7 @@ body {
 }
 
 #momoney {
-  background: $light-grey;
+  background: #0072ff;
 }
 
 #masv {
@@ -141,16 +141,28 @@ body {
   }
 }
 
-#crocs-right {
+#hop-alley {
+  background: #f0d;
+
+  div {
+    top: 60%;
+  }
+}
+
+#uncle {
+  background: $light-grey;
+  
+  div {
+    top: 60%;
+  }
+}
+
+#crocs-right, #hop-alley-right, #uncle-right {
   p {
     a {
       display: none;
     }
   }
-}
-
-#branding {
-  background: $light-grey;
 }
 
 .project-nav {
