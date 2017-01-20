@@ -80,28 +80,27 @@ export default class ProjectsFullPage extends Component {
                 className="button light-background-button"
               >view</button>
             </a>
+            <div className="project-nav">
+              <button
+                onClick={this.handlePaginationClickPrevious.bind(this)}
+                className={this.state.index === 0 ? 'project-nav-previous-none' : 'project-nav-previous'}
+              >
+                <div
+                  className="arrow previous-arrow"
+                />
+                <p>&larr; {this.state.index === 0 ? '' : Projects[this.state.index - 1].title}</p>
+              </button>
+              <button
+                onClick={this.handlePaginationClickNext.bind(this)}
+                className={this.state.index === 5 ? 'project-nav-next-none' : 'project-nav-next'}
+              >
+                <p>{this.state.index === 5 ? '' : Projects[this.state.index + 1].title} &rarr;</p>
+                <div
+                  className="arrow next-arrow"
+                />
+              </button>
+            </div>
           </section>
-
-          <div className="project-nav">
-            <button
-              onClick={this.handlePaginationClickPrevious.bind(this)}
-              className={this.state.index === 0 ? 'project-nav-previous-none' : 'project-nav-previous'}
-            >
-              <div
-                className="arrow previous-arrow"
-              />
-              <p>&larr; {this.state.index === 0 ? '' : Projects[this.state.index - 1].title}</p>
-            </button>
-            <button
-              onClick={this.handlePaginationClickNext.bind(this)}
-              className={this.state.index === 5 ? 'project-nav-next-none' : 'project-nav-next'}
-            >
-              <p>{this.state.index === 5 ? '' : Projects[this.state.index + 1].title} &rarr;</p>
-              <div
-                className="arrow next-arrow"
-              />
-            </button>
-          </div>
         </section>
 
         <section

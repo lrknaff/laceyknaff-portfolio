@@ -53,13 +53,13 @@ export default class SplitRightAbout extends Component {
           <h4 ref={(c) => { this.one = c }}>About</h4>
           <p ref={(c) => { this.two = c }}>Lacey is a self-taught designer, school taught front-end developer, and lifelong learner. She is a firm believer that the whole is greater than the sum of its parts, and that designers and developers who work together can create longer lasting, more thoughtful, user experiences. Her goal is to craft user narratives that satisfy business objectives through design and development solutions. In her free time you'll probably find her outdoors or learning something new.
           She is available for full-time and freelance hire, and would love to <Link to="/Contact">work with you.</Link><span>
-          <br />
+            <br />
           These are some skills and programs she uses along the way:</span></p>
           <ul
             className="skills"
             ref={(c) => { this.three = c }}
           >
-            <li><span>Adobe Creative Suite, Sketch App</span></li>
+            <li><span>Adobe Creative Suite, Sketch App, Invision</span></li>
             <li><span>JavaScript, jQuery, Sass, HTML, CSS, Git</span></li>
             <li><span>React, React Router, Redux, Ember, Express.js</span></li>
             <li><span>Mocha, Chai, Enzyme, Jest, Selenium</span></li>
