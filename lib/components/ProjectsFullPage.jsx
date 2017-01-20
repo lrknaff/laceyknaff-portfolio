@@ -48,16 +48,30 @@ export default class ProjectsFullPage extends Component {
     this.setState({ index: this.state.index + 1 })
     this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    window.scrollTo(0, 0)
   }
   handlePaginationClickPrevious(e) {
     e.preventDefault()
     this.setState({ index: this.state.index - 1 })
     this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    window.scrollTo(0, 0)
   }
   render() {
     return (
       <article>
+        <section
+          className="split-left-container split-left-projects"
+          id={Projects[this.state.index].id}
+        >
+          <div>
+            <img
+              src={Projects[this.state.index].image1}
+              ref={(c) => { this.zero = c }}
+            />
+          </div>
+        </section>
+
         <section className="split-right split-right-container split-right-projects">
           <section className="split-right-project-copy" id={Projects[this.state.index].id2}>
             <h4 ref={(c) => { this.one = c }}>{Projects[this.state.index].title}</h4>
@@ -103,17 +117,6 @@ export default class ProjectsFullPage extends Component {
           </section>
         </section>
 
-        <section
-          className="split-left-container split-left-projects"
-          id={Projects[this.state.index].id}
-        >
-          <div>
-            <img
-              src={Projects[this.state.index].image1}
-              ref={(c) => { this.zero = c }}
-            />
-          </div>
-        </section>
       </article>
     )
   }
