@@ -1,4 +1,4 @@
-@media screen and (max-width: 630px) {
+@media (max-width: 668px) {
   h4 {
     font-size: 30px;
   }
@@ -16,6 +16,9 @@
     height: auto;
     width: 100%;
     overflow: visible;
+  }
+  .split-right-nav {
+    overflow: auto;
   }
   .split-right-nav-open {
     position: fixed;
