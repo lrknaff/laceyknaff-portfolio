@@ -33,12 +33,16 @@ export default class ProjectsFullPage extends Component {
     const e4 = this.four
     const e5 = this.five
 
-    TweenMax.staggerFrom(
+    TweenMax.staggerFromTo(
       [e1, e2, e3, e4, e5],
-      1,
+      0.5,
       {
         opacity: 0,
         y: 50,
+        ease: Power2.easeOut },
+      {
+        opacity: 1,
+        y: 0,
         delay: 0.7,
         ease: Power2.easeOut },
       0.12)
