@@ -13,7 +13,7 @@ export default class SplitLeftMain extends Component {
     const e3 = this.three
     const e4 = this.four
 
-    TweenMax.staggerFrom([e1, e2, e3, e4], 1, { opacity: 0, y: 50, delay: 0.5, ease: Power2.easeOut }, 0.12)
+    TweenMax.staggerFrom([e1, e2, e3, e4], 0.7, { opacity: 0, y: 50, delay: 0.5, ease: Power2.easeOut }, 0.12)
   }
   render() {
     return (

@@ -17,7 +17,7 @@ export default class SplitRightAbout extends Component {
 
     TweenMax.staggerFrom(
       [e1, e2],
-      1,
+      0.7,
       {
         opacity: 0,
         y: 50,

@@ -30,11 +30,11 @@ export default class SplitRightAbout extends Component {
 
     TweenMax.staggerFrom(
       [e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11],
-      1,
+      0.7,
       {
         opacity: 0,
         y: 50,
-        delay: 1.2,
+        delay: 0.8,
         ease: Power2.easeOut },
       0.12)
   }

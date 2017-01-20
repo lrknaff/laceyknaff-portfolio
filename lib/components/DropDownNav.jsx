@@ -17,7 +17,7 @@ export default class DropDownNav extends Component {
 
     TweenMax.staggerFrom(
       [e1, e2, e3, e4, e5],
-      1,
+      0.7,
       {
         opacity: 0,
         y: 50,
