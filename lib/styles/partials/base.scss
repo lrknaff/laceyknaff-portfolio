@@ -92,14 +92,27 @@ body {
   height: 100%;
 }
 
+.split-left-projects {
+  div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
 .split-right-project {
   background: white;
 }
 
 .split-right-project-copy {
-  width: 65%;
+  width: 80%;
   position: relative;
-  margin-left: 10%;
+  margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
 
@@ -109,24 +122,59 @@ body {
 }
 
 #momoney {
+  background: #0072ff;
+}
+
+#masv {
+  background: #484848;
+}
+
+#shoot-the-breeze {
+  background: $dark-grey;
+}
+
+#crocs {
+  background: $pop-color;
+
+  img {
+    width: 80%;
+  }
+}
+
+#hop-alley {
+  background: #f0d;
+
+  div {
+    top: 60%;
+  }
+}
+
+#uncle {
   background: $light-grey;
+  
+  div {
+    top: 60%;
+  }
+}
+
+#crocs-right, #hop-alley-right, #uncle-right {
+  p {
+    a {
+      display: none;
+    }
+  }
 }
 
 .project-nav {
-  top: 42vh;
-  right: 0;
-  position: fixed;
 
   button {
+    color: #484848;
     border-style: none;
-    display: block;
     background: none;
-    text-align: right;
     outline: none;
-    width: 50px;
-    height: 20px;
-    padding: 0;
-    margin-left: 50%;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 
     :focus {
       outline: none;
@@ -134,24 +182,21 @@ body {
 
     :hover {
       cursor: pointer;
+      color: $pop-color;
     }
   }
 }
 
-
-.project-scroll-nav {
-  width: 25px;
-  height: 1px;
-  background: #cdcdcd;
-  right: 0;
-  transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s ease-in-out;
+.project-nav-previous-none, .project-nav-next-none {
+  display: none;
 }
 
-#project-scroll-active {
-  width: 50px;
-  height: 1.5px;
-  background: $pop-color;
-  position: absolute;
+.project-nav-previous {
+  float: left;
+  margin-left: 55px;
+}
+
+.project-nav-next {
+  float: right;
+  margin-right: 55px;
 }

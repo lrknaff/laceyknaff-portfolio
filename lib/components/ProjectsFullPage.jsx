@@ -11,7 +11,20 @@ export default class ProjectsFullPage extends Component {
     }
   }
   componentDidMount() {
+    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+  }
+  gsapAnimationProject() {
+    const e0 = this.zero
+
+    TweenMax.from(
+      e0, 0.5,
+      {
+        opacity: 0,
+        ease: Power2.easeIn,
+        x: -300,
+      },
+    )
   }
   gsapAnimationProjectCopy() {
     const e1 = this.one
@@ -26,27 +39,41 @@ export default class ProjectsFullPage extends Component {
       {
         opacity: 0,
         y: 50,
-        delay: 0.5,
+        delay: 0.7,
         ease: Power2.easeOut },
       0.12)
   }
-  handleScroll() {
-    // if (this.state.index < 5) {
-    //   this.setState({ index: this.state.index + 1 })
-    // } this.setState({ index: this.state.index + 0 })
-  }
-  handlePaginationClick(e) {
+  handlePaginationClickNext(e) {
     e.preventDefault()
-    const value = parseInt(e.target.value, 10)
-    console.log(e.target.value)
-    this.setState({ index: value })
+    this.setState({ index: this.state.index + 1 })
+    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    window.scrollTo(0, 0)
+  }
+  handlePaginationClickPrevious(e) {
+    e.preventDefault()
+    this.setState({ index: this.state.index - 1 })
+    this.gsapAnimationProject()
+    this.gsapAnimationProjectCopy()
+    window.scrollTo(0, 0)
   }
   render() {
     return (
       <article>
+        <section
+          className="split-left-container split-left-projects"
+          id={Projects[this.state.index].id}
+        >
+          <div>
+            <img
+              src={Projects[this.state.index].image1}
+              ref={(c) => { this.zero = c }}
+            />
+          </div>
+        </section>
+
         <section className="split-right split-right-container split-right-projects">
-          <section className="split-right-project-copy">
+          <section className="split-right-project-copy" id={Projects[this.state.index].id2}>
             <h4 ref={(c) => { this.one = c }}>{Projects[this.state.index].title}</h4>
             <p ref={(c) => { this.two = c }}>{Projects[this.state.index].description}</p>
             <p ref={(c) => { this.three = c }}>
@@ -67,64 +94,29 @@ export default class ProjectsFullPage extends Component {
                 className="button light-background-button"
               >view</button>
             </a>
+            <div className="project-nav">
+              <button
+                onClick={this.handlePaginationClickPrevious.bind(this)}
+                className={this.state.index === 0 ? 'project-nav-previous-none' : 'project-nav-previous'}
+              >
+                <div
+                  className="arrow previous-arrow"
+                />
+                <p>&larr; {this.state.index === 0 ? '' : Projects[this.state.index - 1].title}</p>
+              </button>
+              <button
+                onClick={this.handlePaginationClickNext.bind(this)}
+                className={this.state.index === 5 ? 'project-nav-next-none' : 'project-nav-next'}
+              >
+                <p>{this.state.index === 5 ? '' : Projects[this.state.index + 1].title} &rarr;</p>
+                <div
+                  className="arrow next-arrow"
+                />
+              </button>
+            </div>
           </section>
-          <div className="project-nav">
-            <button
-              value="0"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 0 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="1"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 1 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="2"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 2 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="3"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 3 ? 'project-scroll-active' : null}
-              />
-            </button>
-            <button
-              value="4"
-              onClick={this.handlePaginationClick.bind(this)}
-            >
-              <div
-                className="project-scroll-nav"
-                id={this.state.index === 4 ? 'project-scroll-active' : null}
-              />
-            </button>
-          </div>
         </section>
 
-        <section
-          className="split-left-container split-left-projects"
-          id={Projects[this.state.index].id}
-        >
-          <div>
-            <img src={Projects[this.state.index].image1} />
-          </div>
-        </section>
       </article>
     )
   }
