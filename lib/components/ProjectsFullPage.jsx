@@ -11,8 +11,8 @@ export default class ProjectsFullPage extends Component {
     }
   }
   componentDidMount() {
-    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    this.gsapAnimationProject()
   }
   gsapAnimationProject() {
     const e0 = this.zero
@@ -27,6 +27,7 @@ export default class ProjectsFullPage extends Component {
       {
         opacity: 1,
         ease: Power2.easeIn,
+        delay: 0.2,
         x: 0,
       },
     )
@@ -55,15 +56,15 @@ export default class ProjectsFullPage extends Component {
   handlePaginationClickNext(e) {
     e.preventDefault()
     this.setState({ index: this.state.index + 1 })
-    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    this.gsapAnimationProject()
     window.scrollTo(0, 0)
   }
   handlePaginationClickPrevious(e) {
     e.preventDefault()
     this.setState({ index: this.state.index - 1 })
-    this.gsapAnimationProject()
     this.gsapAnimationProjectCopy()
+    this.gsapAnimationProject()
     window.scrollTo(0, 0)
   }
   render() {
