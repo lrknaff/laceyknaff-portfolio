@@ -17,12 +17,17 @@ export default class ProjectsFullPage extends Component {
   gsapAnimationProject() {
     const e0 = this.zero
 
-    TweenMax.from(
+    TweenMax.fromTo(
       e0, 0.5,
       {
         opacity: 0,
         ease: Power2.easeIn,
         x: -300,
+      },
+      {
+        opacity: 1,
+        ease: Power2.easeIn,
+        x: 0,
       },
     )
   }
