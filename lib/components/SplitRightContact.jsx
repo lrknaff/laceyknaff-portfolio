@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
+import { TweenMax, staggerFrom, Power2 } from 'gsap'
 
 export default class SplitRightAbout extends Component {
   constructor() {

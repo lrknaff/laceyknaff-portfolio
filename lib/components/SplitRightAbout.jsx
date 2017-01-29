@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { TweenMax, staggerFrom, Power2, Bounce } from 'gsap'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { TweenMax, staggerFrom, Power2 } from 'gsap'
+import { Link } from 'react-router'
 
 export default class SplitRightAbout extends Component {
   constructor() {

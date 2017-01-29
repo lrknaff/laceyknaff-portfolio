@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ReactTransitionGroup from 'react-addons-transition-group'
-import { TweenMax, staggerFrom, staggerTo, Power4, Bounce } from 'gsap'
 import HamburgerNav from './HamburgerNav'
 import DropDownNav from './DropDownNav'
 

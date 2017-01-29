@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import ReactTransitionGroup from 'react-addons-transition-group'
-import { TweenMax, staggerFrom, staggerTo, Power2, Power4, Bounce } from 'gsap'
+import { TweenMax, staggerFrom, Power2 } from 'gsap'
 
 export default class DropDownNav extends Component {
   componentDidMount() {
