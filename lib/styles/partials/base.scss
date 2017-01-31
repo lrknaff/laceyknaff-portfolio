@@ -124,6 +124,10 @@ body {
 
 #momoney {
   background: #0072ff;
+
+  img {
+    width: 65%;
+  }
 }
 
 #masv {
@@ -147,7 +151,7 @@ body {
   background: #f0d;
 
   div {
-    top: 55%;
+    top: 50%;
   }
 }
 
@@ -155,7 +159,7 @@ body {
   background: $light-grey;
 
   div {
-    top: 60%;
+    top: 50%;
   }
 }
 
